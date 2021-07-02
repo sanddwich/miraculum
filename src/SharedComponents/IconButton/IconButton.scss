@@ -1,0 +1,17 @@
+.IconButton {
+  overflow: hidden;
+  padding: 20px;
+  cursor: pointer;
+
+  .IconButton__icon {
+    padding: 20px;
+  }
+
+  .IconButton__title {
+    padding: 20px;
+  }
+}
+
+.hvr-sweep-to-right:before {
+  background: #5b68df;
+}

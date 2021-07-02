@@ -1,7 +1,7 @@
 import './App.scss'
 import { Container } from 'react-bootstrap'
 import { Route, Switch } from 'react-router-dom'
-import AdminLayout from './Layouts/AdminLayout/AdminLayout'
+// import AdminLayout from './Layouts/AdminLayout/AdminLayout'
 import MainLayout from './Layouts/MainLayout/MainLayout'
 import { connect } from 'react-redux'
 import { RootState } from './Redux'
@@ -29,7 +29,7 @@ const App = (props: AppProps) => {
       {props.toast.isActive && <ToastComponent />}
 
       <Switch>
-        <Route path="/admin" component={AdminLayout} />
+        {/* <Route path="/admin" component={AdminLayout} /> */}
         <Route path="/" component={MainLayout} />
       </Switch>
     </Container>

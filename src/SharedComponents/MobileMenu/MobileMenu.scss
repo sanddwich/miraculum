@@ -1,43 +1,162 @@
 .MobileMenu {
   position: fixed;
-  top: 80px;
+  top: 0;
   bottom: 0;
   z-index: 1000;
-  padding-top: 20px !important;
   animation-duration: 0.4s;
-  background-color: #343a40;
-  border-top:  1px solid #f8f9fa;
-  padding: 0;
+  background-color: #2c2c2c;
+  padding-bottom: 30px !important;
 
   overflow-y: scroll;
 
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-size: 18px;font-weight: 500;
-  color: #f8f9fa;
-
-  .MobileMenu__closeBtn {
-    padding-top: 10px;
-    padding-right: 60px;
+  .MobileMenu__twoRow  {
+    margin-top: -20px !important;
   }
 
-  .MobileMenu__Row, .MobileMenu__closeBtnCont {
-    margin: 0;
+  .IconButton {
+    width: 100% !important;
   }
 
-  .MobileMenu__menuEl {
+  .MobileMenu__oneRow {
     padding: 10px;
-    border-bottom: 1px dashed #f8f9fa;
+    padding-top: 22px;
   }
 
+  .MobileMenu__logo {
+    width: 213px;
+    height: 50px;
+  }
 
-  &::-webkit-scrollbar {
-    width: 5px;
-  }   
-  &::-webkit-scrollbar-track {
-    border-radius: 3px;
-  }   
-  &::-webkit-scrollbar-thumb {
-    background-color: #7dbaec;
+  .MobileMenu__closeButton {
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b3b3b;
+    border-radius: 50%;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+    img {
+      width: 19px;
+      height: 19px;
+    }
+
+    &:hover {
+      background-color: #6d6d6d;
+    }
+  }
+
+  .MobileMenu__menuBlock {
+    padding-top: 30px !important;
+    ul {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+
+      color: #ffffff;
+
+      li {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .MobileMenu__phone {
+    padding: 20px;
+    padding-top: 0;
+    padding-bottom: 10px;
+
+    .MainHeader__phoneTitle {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    .MobileMenu__phoneNumber {
+      a {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 145%;
+        text-transform: uppercase;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+
+        color: #ffffff;
+      }
+    }
+  }
+
+  .MobileMenu__socialLinks {
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+  }
+
+  .MobileMenu__messengersCont {
+    height: 100%;
+    margin-top: -277px !important;
+    .MobileMenu__messengers {
+      background-color: #8ebe2d;
+      height: 350px;
+      border-radius: 20px 20px 0px 20px;
+
+      h1 {
+        font-family: 'Druk Cyr';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: left;
+        color: #ffffff;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 135%;
+        /* or 19px */
+
+        color: #ffffff;
+      }
+    }
+
+    .IconButton {
+      filter: drop-shadow(0px 8px 13px rgba(0, 0, 0, 0.13));
+      margin-bottom: 15px;
+
+      font-family: 'Montserrat';
+      font-size: 16px;
+      line-height: 145%;
+    }
+
+    .MobileMenu__photo {
+      img {
+        width: 200px;
+      }
+    }
+  }
+
+  .MobileMenu__LeftContent {
+    position: relative;
+    z-index: 10;
+  }
+
+  .MobileMenu__MC {
+    overflow: hidden;
   }
 }

@@ -1,3 +1,111 @@
 .MainHeader {
+  padding: 0;
+  margin-bottom: -226px;
+  position: relative;
+  z-index: 10;
+
+  .MainHeader__Cont {
+    padding: 0;
+    padding-top: 50px;
+
+    .MainHeader__Row1 {
+      padding-bottom: 50px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .MainHeader__logo {
+      padding-right: 20px;
+    }
+
+    .MainHeader__logoTitle {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .MainHeader__logoDescr {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 130%;
+      letter-spacing: 0.15em;
+      color: #ffffff;
+    }
+
+    .MainHeader__burger {
+      padding-right: 20px;
+      cursor: pointer;
+    }
+
+    @media screen and(max-width:576px) {
+      .MainHeader__logo {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .MainHeader__logoTitle {
+        font-size: 20px;
+      }
   
+      .MainHeader__logoDescr {
+        font-size: 13px;
+      }
+    }
+
+    .MainHeader__phoneCont {
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+    }
+
+    .MainHeader__phone {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 145%;
+      text-transform: uppercase;
+      font-feature-settings: 'pnum' on, 'lnum' on;
+      text-align: right;
+      color: #ffffff;
+    }
+
+    .MainHeader__phoneTitle {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 130%;
+      text-align: right;
+      color: #ffffff;
+    }
+
+    .MainHeader__navbarEl {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 130%;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      padding-right: 50px;
+      padding-bottom: 20px;
+      cursor: pointer;
+
+      &:hover {
+        color: #FFD467;
+      }
+    }
+  }
 }

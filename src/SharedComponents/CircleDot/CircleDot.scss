@@ -1,0 +1,22 @@
+.CircleDot {
+  cursor: pointer;
+
+  .CircleDot_message {
+    position: absolute;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 3px;
+    z-index: 20;
+    width: 260px;
+    height: 150px;
+    margin-top: -230px;
+  }
+
+  .CircleDot__internal {
+    font-weight: 400;
+    font-size: 30px;
+    padding-bottom: 2px;
+  }
+}
