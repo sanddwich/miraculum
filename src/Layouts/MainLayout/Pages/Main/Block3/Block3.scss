@@ -1,0 +1,109 @@
+.Block3 {
+  padding: 0;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-size: cover;
+  background-image: none !important;
+  @media screen and(max-width: 576px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .Block3__Left {
+    border-bottom: 2px solid #ffd467;
+    border-top: 2px solid #ffd467;
+
+    @media screen and(max-width: 576px) {
+      border-bottom: none;
+      border-top: none;
+    }
+  }
+
+  .MobileHorLineCont {
+    padding-left: 20px;
+    padding-right: 20px;
+    .MobileHorLine {
+      height: 2px;
+      background-color: #ffd467;
+    }
+  }
+
+
+  .Block3__Cont {
+    padding: 0;
+  }
+
+  .Block3__LeftTitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 130%;
+    color: #ffffff;
+
+    @media screen and(max-width: 768px) {
+      font-size: 34px;
+    }
+
+    @media screen and(max-width: 576px) {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      font-size: 26px;
+    }
+  }
+
+  .Block3__icon {
+    position: absolute;
+    margin-top: -98px;
+  }
+
+  .Block3__Right {
+    padding: 0;
+  }
+
+  .Block3__list {
+    // text-align: right;
+    padding-left: 20px;
+    .Block3__listEl {
+      .Block3__listElCont {
+        padding: 20px;
+        padding-left: 50px;
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 135%;
+        font-feature-settings: 'pnum' on, 'lnum' on;
+        background-color: #333333;
+      }
+
+      &:nth-child(2n-1) {
+        .Block3__listElCont {
+          background-color: #3c3c3c;
+        }
+      }
+    }
+
+    @media screen and(max-width: 768px) {
+      border-top: none;
+      padding-left: 0px;
+      .Block3__listEl {
+        .Block3__listElCont {
+          padding: 20px;
+          padding-left: 20px;
+        }
+      }
+    }
+
+    @media screen and(max-width: 576px) {
+      .Block3__listEl {
+        .Block3__listElCont {
+          width: 100% !important;
+          font-size: 16px;
+          padding: 20px;
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}
