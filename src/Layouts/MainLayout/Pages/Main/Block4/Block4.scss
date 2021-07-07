@@ -1,0 +1,35 @@
+.Block4 {
+  padding: 0;
+  padding-top: 100px;
+
+  .Block4__Col {
+    padding: 10px;
+  }
+
+  h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 130%;
+    color: #ffffff;
+    padding-bottom: 70px;
+
+    @media screen and(max-width:576px) {
+      padding-left: 20px;
+      font-size: 26px;
+    }
+  }
+
+  .MobileHorLineCont {
+    .MobileHorLine {
+      height: 2px;
+      background-color: #ffd467;
+    }
+
+    @media screen and(max-width:576px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+}

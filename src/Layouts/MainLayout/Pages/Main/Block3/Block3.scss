@@ -3,10 +3,10 @@
   padding-top: 150px;
   padding-bottom: 150px;
   background-size: cover;
-  background-image: none !important;
   @media screen and(max-width: 576px) {
     padding-top: 50px;
     padding-bottom: 50px;
+    background-image: none !important;
   }
 
   .Block3__Left {
