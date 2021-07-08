@@ -1,0 +1,39 @@
+.CommandCard {
+  .CommandCard__Col {
+    h3 {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 130%;
+      color: #ffffff;
+      padding-bottom: 20px;
+    }
+
+    h4 {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 130%;
+      color: #9f9f9f;
+      padding-bottom: 30px;
+    }
+
+    p {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 130%;
+      color: #ffffff;
+    }
+
+    img {
+      // backdrop-filter: blur(15px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 3px;
+    }
+  }
+}
