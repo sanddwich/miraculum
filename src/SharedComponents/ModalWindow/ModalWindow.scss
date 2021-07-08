@@ -17,7 +17,8 @@
     bottom: 50px;
     left: 50px;
     right: 50px;
-    background-color: #ffffff;
+    background-color: #1C1C1C;
+    border-radius: 3px;
   }
 
   .ModalWindow__header {
@@ -33,9 +34,22 @@
 
   .ModalWindow__body {
     padding: 30px;
-    padding-bottom: 0;
+    padding-top: 120px;
+    padding-bottom: 20px;
     height: 90%;
     overflow-y: scroll;
+
+    @media screen and(max-width: 576px) {
+      padding: 10px;
+      padding-top: 80px;
+      padding-bottom: 20px;
+    }
+
+    @media screen and(max-width: 400px) {
+      padding: 10px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     /* полоса прокрутки (скроллбар) */
     &::-webkit-scrollbar {
@@ -45,7 +59,8 @@
 
     /* ползунок скроллбара */
     &::-webkit-scrollbar-thumb {
-      background-color: #0068a5;
+      background-color: #6473fb;
+      // color: #5e5e5e;
     }
   }
 
@@ -59,17 +74,24 @@
 
     &:hover {
       svg {
-        fill: #0068a5;
+        fill: #6473fb;
       }
     }
   }
 
   @media screen and(max-width:576px) {
     .ModalWindow__container {
-      top: 20px;
-      bottom: 20px;
+      top: 10%;
+      bottom: 10%;
       left: 10px;
       right: 10px;
+    }
+  }
+
+  @media screen and(max-width:400px) {
+    .ModalWindow__container {
+      top: 20%;
+      bottom: 20%;
     }
   }
 }

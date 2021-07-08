@@ -1,0 +1,108 @@
+.Block6 {
+  margin-top: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h1 {
+    padding: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 130%;
+    color: #ffffff;
+    height: 140px;
+
+    @media screen and(max-width: 576px) {
+      font-size: 26px;
+      height: 80px;
+    }
+  }
+
+  p {
+    padding: 10px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 145%;
+    color: #d9d9d9;
+    padding-bottom: 20px;
+
+    @media screen and(max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+
+  .Block6__letterBlur {
+    padding: 10px;
+
+    .Block6__letterBG {
+      height: 100%;
+      background-size: cover;
+      background-position: center center;
+
+      filter: blur(2px);
+    }
+
+    .Block6__letter {
+      height: 220px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      background: linear-gradient(0deg, rgba(100, 115, 251, 0.5), rgba(100, 115, 251, 0.5));
+      opacity: 0.8;
+
+      @media screen and(max-width: 576px) {
+        height: 160px;
+      }
+    }
+
+    &:hover {
+      .Block6__letterImg {
+        display: flex;
+        @media screen and(max-width: 576px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .Block6__letterImg {
+    width: 100%;
+    padding-right: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    margin-top: -140px;
+    display: none;
+    cursor: pointer;
+
+    @media screen and(max-width: 576px) {
+      display: none;
+    }
+  }
+
+  .lastElement {
+    background: #ffd467 !important;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+
+    color: #1c1c1c;
+    opacity: 1 !important;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and(max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+}

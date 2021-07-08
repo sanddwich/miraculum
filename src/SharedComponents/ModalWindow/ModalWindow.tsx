@@ -32,11 +32,11 @@ const ModalWindow = (props: ModalWindowProps) => {
       <div className="ModalWindow__container">
         <Container fluid className="ModalWindow__header p-0">
           <Row className="m-0 h-100">
-            <Col xs={10} className="ModalWindow__headerTitle d-flex align-items-center">
+            <Col sm={10} xs={9} className="ModalWindow__headerTitle d-flex align-items-center">
               {props.title && props.title}
             </Col>
-            <Col xs={2} className="ModalWindow__close d-flex justify-content-end align-items-center">
-              <Icon.XCircleFill width={35} height={35} fill={`#212529`} onClick={() => closeButtonHandler()} />
+            <Col sm={2} xs={3} className="ModalWindow__close d-flex justify-content-end align-items-center">
+              <Icon.XCircleFill width={35} height={35} fill={`#5e5e5e`} onClick={() => closeButtonHandler()} />
             </Col>
           </Row>
         </Container>

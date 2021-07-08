@@ -10,7 +10,7 @@ const initialState: ModalState = {
     isActive: false,
   },
   modalWindow: {
-    isActive: true,
+    isActive: false,
   },
 }
 

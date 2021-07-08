@@ -1,0 +1,135 @@
+import React, { useState } from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import { connect } from 'react-redux'
+import { Config } from '../../../../../Config/Config'
+import { RootState } from '../../../../../Redux'
+import { setModalWindow } from '../../../../../Redux/actions/modal'
+import { ModalState } from '../../../../../Redux/interfaces/interfaces'
+import ModalWindow from '../../../../../SharedComponents/ModalWindow/ModalWindow'
+import './Block6.scss'
+
+// Import Swiper React components
+import SwiperCore, { Autoplay, Navigation } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/swiper.scss'
+import 'swiper/components/navigation/navigation.scss'
+import 'swiper/components/pagination/pagination.scss'
+
+interface Block6Props {
+  setModalWindow: (isActive: boolean) => void
+  modal: ModalState
+}
+
+const Block6 = (props: Block6Props) => {
+  const [letters, setLetters] = useState<number>(5)
+  const [modalSlider, setModalSlider] = useState<boolean>(false)
+  const [activeSlide, setActiveSlide] = useState<string>(Config.letters[0])
+
+  const closeHandler = (): void => {
+    props.setModalWindow(false)
+  }
+
+  const modalOpen = (slider: boolean = false, activeSlide: string = Config.letters[0]): void => {
+    setActiveSlide(activeSlide)
+    setModalSlider(slider)
+    props.setModalWindow(true)
+  }
+
+  return (
+    <Container className="Block6 p-0">
+      {props.modal.modalWindow.isActive && (
+        <ModalWindow closeHandler={() => closeHandler()}>
+          {modalSlider ? (
+            <Swiper
+              loop={false}
+              navigation={{
+                nextEl: '#Block2__NextArrow',
+                prevEl: '#Block2__PrewArrow',
+              }}
+              spaceBetween={10}
+              breakpoints={{
+                992: {
+                  slidesPerView: 2,
+                },
+                768: {
+                  slidesPerView: 1,
+                },
+              }}
+              autoplay={{
+                delay: 5000,
+              }}
+            >
+              {Config.letters.map((img, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <Container fluid className="p-0 d-flex justify-content-center align-items-center">
+                      <img className="img-fluid" src={img} alt="" />
+                    </Container>
+                  </SwiperSlide>
+                )
+              })}
+            </Swiper>
+          ) : (
+            <Container fluid className="p-0 d-flex justify-content-center align-items-center">
+              <img className="img-fluid" src={activeSlide} alt="" />
+            </Container>
+          )}
+        </ModalWindow>
+      )}
+
+      <Row className="Block6__Row1 m-0">
+        <Col lg={6} xs={12} className="Block6__left p-0">
+          <h1>О компании</h1>
+          <p>
+            <b>MIRACULUM research group</b> – независимое исследовательское агентство, специализирующееся на
+            маркетинговых исследованиях для принятия эффективных управленческих решений.
+          </p>
+          <p>
+            <b>MIRACULUM research group</b> реализует полный комплекс исследований, направленных на получение
+            разносторонней аналитической информации в сфере изучения продукта, потребителей, клиентов, бренда,
+            коммуникаций и развития бизнеса.
+          </p>
+        </Col>
+        <Col lg={6} xs={12} className="Block6__right p-0">
+          <h1>Рекомендательные письма</h1>
+          <Container fluid className="Block6__letters p-0">
+            <Row className="Block6__lettersRow m-0">
+              {Config.letters.map((letter, index) => {
+                if (index < letters) {
+                  return (
+                    <Col xs={4} key={index} className="Block6__letterBlur" onClick={() => modalOpen(false, letter)}>
+                      <Container fluid className="Block6__letterBG p-0" style={{ backgroundImage: `url("${letter}")` }}>
+                        <div className="Block6__letter"></div>
+                      </Container>
+                      <div className="Block6__letterImg">
+                        <img src="/icons/zoom.svg" alt="" />
+                      </div>
+                    </Col>
+                  )
+                }
+              })}
+              <Col xs={4} className="Block6__letterBlur" onClick={() => modalOpen(true)}>
+                <div className="Block6__letter lastElement">Смотреть все</div>
+              </Col>
+            </Row>
+          </Container>
+        </Col>
+      </Row>
+    </Container>
+  )
+}
+
+const mapDispatchToProps = {
+  setModalWindow,
+}
+
+function mapStateToProps(state: RootState) {
+  const modal = state.modal
+  return {
+    modal,
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Block6)
