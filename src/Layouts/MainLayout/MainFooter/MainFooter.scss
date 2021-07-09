@@ -1,3 +1,75 @@
 .MainFooter {
-  
+  padding: 0;
+  padding-top: 90px;
+  padding-bottom: 40px;
+  background-color: #222222;
+
+  .MainFooter__text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 145%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: #ffffff;
+    @media screen and(max-width: 576px) {
+      font-size: 14px;
+    }
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+
+      &:hover {
+        color: #6473fb;
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      color: #6473fb;
+      cursor: pointer;
+    }
+  }
+
+  .MainFooter__container {
+    padding-bottom: 50px;
+
+    @media screen and(max-width: 768px) {
+      padding: 10px !important;
+      padding-bottom: 50px !important;
+      width: 100%;
+    }
+  }
+
+  .MainFooter__textHeader {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 145%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: #979797;
+
+    
+    @media screen and(max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+
+  .MainFooter__img {
+    img {
+      cursor: pointer;
+      padding-right: 20px;
+    }
+
+    .hvr-grow:hover,
+    .hvr-grow:focus,
+    .hvr-grow:active {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+  }
 }

@@ -1,0 +1,34 @@
+.AreaCard {
+  padding: 0;
+  padding-left: 27px;
+
+  &:hover {
+    cursor: pointer;
+    .AreaCard__Row {
+      box-shadow: 1px 1px 1px rgba(100, 115, 251, 0.6);
+    }    
+  }
+
+  &.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  .AreaCard__icon {
+    position: absolute;
+    margin-left: -27px;
+  }
+
+  .AreaCard__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 145%;
+    color: #ffffff;
+
+    width: 100%;
+    padding: 27px;
+    padding-left: 50px;
+  }
+}

@@ -32,7 +32,7 @@ export default function CircleDot(props: CircleDotProps) {
       onMouseEnter={() => onHover()}
       onMouseLeave={() => onLeave()}
     >
-      {message && <div className="CircleDot_message">{props.children}</div>}
+      {message && <div className="CircleDot_message animated animate__fadeInUp">{props.children}</div>}
       <div
         className="CircleDot__internal d-flex justify-content-center align-items-center"
         style={{
