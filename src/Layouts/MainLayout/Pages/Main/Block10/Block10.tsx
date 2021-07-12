@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { scroller, Element } from 'react-scroll'
 import { Config } from '../../../../../Config/Config'
 import CaseInterface from '../../../../../Redux/interfaces/AdditionalInterfaces/CaseInterface'
-import TaskInterface from '../../../../../Redux/interfaces/AdditionalInterfaces/TaskInterface'
 import CaseDropDownCard from '../../../../../SharedComponents/CaseDropDownCard/CaseDropDownCard'
 import CaseItemCard from '../../../../../SharedComponents/CaseItemCard/CaseItemCard'
 import IconButton from '../../../../../SharedComponents/IconButton/IconButton'
@@ -19,22 +18,10 @@ export default function Block10(props: Block10Props) {
     const activeCaseTmp = Config.cases.find((caseItem) => caseItem.isActive === true)
     return activeCaseTmp
   })
-  const [activeTask, setActiveTask] = useState<TaskInterface | undefined>(() => {
-    let activeTaskTmp: TaskInterface | undefined = undefined
-    if (activeCase) {
-      activeTaskTmp = activeCase.tasks.find((taskItem) => taskItem.isActive === true)
-    }
-    return activeTaskTmp
-  })
 
   const getActiveCase = (): CaseInterface | undefined => {
     const activeCaseTmp = cases.find((caseItem) => caseItem.isActive === true)
     return activeCaseTmp
-  }
-
-  const getActiveTask = (): TaskInterface | undefined => {
-    const activeTaskTmp = activeCase?.tasks.find((taskItem) => taskItem.isActive === true)
-    return activeTaskTmp
   }
 
   const caseChange = (caseName: string): void => {
@@ -50,26 +37,8 @@ export default function Block10(props: Block10Props) {
 
     setCases(casesTmp)
     setActiveCase(getActiveCase())
-    setActiveTask(getActiveCase()?.tasks[0])
 
     scrollTo('Block10__cases', 0)
-  }
-
-  const taskChange = (taskName: string): void => {
-    const activeCaseTmp = activeCase
-    activeCaseTmp?.tasks.map((taskItem) => {
-      if (taskName === taskItem.name) {
-        taskItem.isActive = true
-      } else {
-        taskItem.isActive = false
-      }
-      return taskItem
-    })
-
-    setActiveCase(activeCaseTmp)
-    setActiveTask(getActiveTask())
-
-    // scrollTo('Block10__tasks', -200)
   }
 
   const scrollTo = (ankorName: string, offset: number): void => {
@@ -88,7 +57,7 @@ export default function Block10(props: Block10Props) {
         {activeCase && (
           <Container key={activeCase.name} fluid className="Block10__case">
             <Row className="Block10__caseRow1 m-0">
-              <Col xl={6} lg={12} className="Block10__caseCol1 p-0">
+              <Col xl={5} lg={12} className="Block10__caseCol1 p-0">
                 <CaseDropDownCard
                   icon={activeCase.icon}
                   title={activeCase.name}
@@ -98,44 +67,37 @@ export default function Block10(props: Block10Props) {
               </Col>
             </Row>
             <Row className="Block10__caseRow m-0 justify-content-between">
-              {activeCase.caseItems.map((caseItem, index) => {
-                return (
-                  <Col md={index === 0 ? 6 : 3} key={index} className="Block10__caseCont">
-                    <CaseItemCard caseItem={caseItem} />
-                  </Col>
-                )
-              })}
+              <Col xl={5} className="Block10__caseCont">
+                <CaseItemCard caseItem={activeCase.caseItems[0]} />
+              </Col>
+              <Col xl={4} className="Block10__caseCont">
+                <CaseItemCard caseItem={activeCase.caseItems[1]} />
+              </Col>
+              <Col xl={3} className="Block10__caseCont">
+                <CaseItemCard caseItem={activeCase.caseItems[2]} />
+                <div className="Block10__separator"></div>
+                <CaseItemCard caseItem={activeCase.caseItems[3]} />
+              </Col>
             </Row>
-            {activeTask && (
-              // <Element name="Block10__tasks">
-                <Container key={activeTask.name} fluid className="Block10__tasks p-0">
-                  <Row className="Block10__caseRow1 m-0">
-                    <Col xl={6} lg={12} className="Block10__caseCol1 p-0">
-                      <TaskDropDownCard taskList={activeCase.tasks} taskChange={taskChange} />
-                    </Col>
-                  </Row>
-                  {activeTask && <h3>Задача: {activeTask.name}</h3>}
-                  <Row className="Block10__caseRow m-0 justify-content-between">
-                    {activeTask.taskItems.map((taskItem, index) => {
-                      return (
-                        <Col
-                          lg={index === 0 ? 6 : 3}
-                          key={index}
-                          className={`Block10__caseCont ${index === 0 && 'Block10__caseContSpecial'}`}
-                          style={{ padding: 20 }}
-                        >
-                          <TaskItemCard taskItem={taskItem} />
-                        </Col>
-                      )
-                    })}
-                  </Row>
-                </Container>
-              // </Element>
-            )}
+
+            <Container fluid className="Block10__tasks p-0">
+              <Row className="Block10__caseRow1 m-0">
+                <Col xl={6} lg={12} className="Block10__caseCol1 p-0">
+                  <TaskDropDownCard taskList={activeCase.tasks} />
+                </Col>
+              </Row>
+              {/* {activeTask && <h3>Задача: {activeTask.name}</h3>} */}
+              <Row className="Block10__caseRow m-0 justify-content-between">
+                <Col className="Block10__caseCont Block10__caseContSpecial" style={{ padding: 20 }}>
+                  {/* <TaskItemCard taskItem={taskItem} /> */}
+                </Col>
+                ){/* })} */}
+              </Row>
+            </Container>
 
             <Row className="Block10__button m-0 align-items-center">
               <Col lg={6} md={12} className="Block10__buttonCol">
-                <p>Нужно провести подобное исследование?</p>
+                <p>Нужно провести подробное исследование?</p>
               </Col>
               <Col lg={6} md={12} className="Block10__buttonCol">
                 <IconButton

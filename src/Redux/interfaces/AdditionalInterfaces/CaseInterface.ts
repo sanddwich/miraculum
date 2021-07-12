@@ -6,5 +6,5 @@ export default interface CaseInterface {
   icon: string
   isActive: boolean
   caseItems: CaseItemInterface[]
-  tasks: TaskInterface[]
+  tasks: string[]
 }

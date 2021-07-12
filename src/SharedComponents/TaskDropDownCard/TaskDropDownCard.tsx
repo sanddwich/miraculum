@@ -6,8 +6,7 @@ import './TaskDropDownCard.scss'
 
 interface TaskDropDownCardProps {
   icon?: string
-  taskList: TaskInterface[]
-  taskChange: (caseName: string) => void
+  taskList: string[]
 }
 
 export default function TaskDropDownCard(props: TaskDropDownCardProps) {
