@@ -1,37 +1,37 @@
-.CaseItemCard {
+.TaskItemCard {
   padding: 0;
 
-  .CaseItemCard__Col {
+  .TaskItemCard__Col {
     padding: 0;
   }
 
-  .CaseItemCard__title {
+  .TaskItemCard__title {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 600;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 145%;
     color: #ffffff;
 
-    @media screen and(max-width: 992px) {
+    @media screen and(max-width: 576px) {
       font-size: 18px;
     }
   }
 
-  .CaseItemCard__img {
+  .TaskItemCard__img {
     padding-right: 10px;
   }
 
-  .CaseItemCard__text {
+  .TaskItemCard__text {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 145%;
     color: #d9d9d9;
     padding-top: 25px;
 
-    @media screen and(max-width: 992px) {
+    @media screen and(max-width: 576px) {
       font-size: 14px;
     }
   }

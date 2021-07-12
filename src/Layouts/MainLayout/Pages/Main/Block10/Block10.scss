@@ -3,6 +3,19 @@
   padding-top: 150px;
   padding-bottom: 150px;
 
+  .Block10__buttonCol {
+    @media screen and(max-width: 576px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .IconButton {
+    @media screen and(max-width: 576px) {
+      width: 280px !important;
+    }
+  }
+
   h1 {
     font-family: 'Roboto';
     font-style: normal;
@@ -18,15 +31,65 @@
     }
   }
 
+  .Block10__tasks {
+    h3 {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 145%;
+      color: #ffffff;
+      padding: 0;
+      margin-bottom: -30px;
+      padding-top: 30px;
+
+      @media screen and(max-width: 576px) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .Block10__buttonCol {
+    p {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 145%;
+      color: #ffffff;
+    }
+
+    @media screen and(max-width: 992px) {
+      padding-bottom: 30px;
+    }
+  }
+
   .Block10__caseCont {
+    padding: 0;
     padding-right: 20px;
     padding-bottom: 30px;
 
     &:nth-child(1) {
-      width: 45%;
-
       @media screen and(max-width: 992px) {
         width: 100%;
+      }
+    }
+
+    @media screen and(max-width: 576px) {
+      padding: 0 !important;
+      padding-bottom: 30px !important;
+    }
+
+    &.Block10__caseContSpecial {
+      background-color: #ffd467;
+      padding: 30px !important;
+      margin-bottom: 30px;
+
+      .TaskItemCard__title {
+        color: #000000;
+      }
+      .TaskItemCard__text {
+        color: #000000;
       }
     }
   }
@@ -36,8 +99,9 @@
     padding-bottom: 70px;
   }
 
-  .Block10__caseRow2 {
+  .Block10__caseRow {
     padding-top: 70px;
+    padding-bottom: 60px;
   }
 
   @media screen and(max-width: 576px) {

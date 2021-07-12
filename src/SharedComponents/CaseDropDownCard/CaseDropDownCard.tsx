@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import OutsideClickHandler from 'react-outside-click-handler'
 import CaseInterface from '../../Redux/interfaces/AdditionalInterfaces/CaseInterface'
 import './CaseDropDownCard.scss'
@@ -17,19 +17,19 @@ export default function CaseDropDownCard(props: CaseDropDownCardProps) {
   return (
     <OutsideClickHandler onOutsideClick={() => setDropDown(false)}>
       <Container fluid className="CaseDropDownCard" onClick={() => setDropDown(!dropDown)}>
-        <Row className="CaseDropDownCard__Row justify-content-between align-items-center">
-          <div className="CaseDropDownCard__name d-flex">
+        <Row className="CaseDropDownCard__Row m-0 justify-content-between align-items-center">
+          <Col xs={10} className="CaseDropDownCard__name p-0 d-flex  justify-content-start align-items-center">
             <div className="CaseDropDownCard__nameImg">
               <img src={props.icon} alt={props.title} />
             </div>
             <div className="CaseDropDownCard__nameTitle">{props.title}</div>
-          </div>
-          <div className="CaseDropDownCard__ddImg">
+          </Col>
+          <Col xs={2} className="CaseDropDownCard__ddImg p-0 d-flex justify-content-end align-items-center">
             <img src="/icons/arrowDown.svg" alt="" />
-          </div>
+          </Col>
         </Row>
         {dropDown && (
-          <Row className="CaseDropDownCard__ddCont">
+          <Row className="CaseDropDownCard__ddCont m-0">
             <Container fluid className="CaseDropDownCard__dd">
               {props.caseList.map((caseItem, index) => {
                 return (
@@ -39,10 +39,12 @@ export default function CaseDropDownCard(props: CaseDropDownCardProps) {
                     className="CaseDropDownCard__caseItem d-flex align-items-center"
                     onClick={() => props.caseChange(caseItem.name)}
                   >
-                    <div className="CaseDropDownCard__caseItemImg">
+                    <div className="CaseDropDownCard__caseItemImg d-flex justify-content-center align-items-center">
                       <img src={caseItem.icon} alt={caseItem.name} />
                     </div>
-                    <div className="CaseDropDownCard__caseItemTitle">{caseItem.name}</div>
+                    <div className="CaseDropDownCard__caseItemTitle d-flex justify-content-start align-items-center">
+                      {caseItem.name}
+                    </div>
                   </Container>
                 )
               })}
