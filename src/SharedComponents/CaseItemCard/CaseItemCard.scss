@@ -1,0 +1,30 @@
+.CaseItemCard {
+  padding: 0;
+
+  .CaseItemCard__Col {
+    padding: 0;
+  }
+
+  .CaseItemCard__title {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 145%;
+    color: #ffffff;
+  }
+
+  .CaseItemCard__img {
+    padding-right: 10px;
+  }
+
+  .CaseItemCard__text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 145%;
+    color: #d9d9d9;
+    padding-top: 25px;
+  }
+}
