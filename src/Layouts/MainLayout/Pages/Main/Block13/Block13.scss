@@ -1,0 +1,94 @@
+.Block13 {
+  padding: 0;
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  @media screen and(max-width:576px) {
+    padding: 20px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 130%;
+    color: #ffffff;
+    padding-bottom: 70px;
+
+    @media screen and(max-width:576px) {
+      font-size: 26px;
+    }
+  }
+
+  h6 {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 145%;
+    color: #979797;
+    padding-bottom: 15px;
+  }
+
+  .Block13__iconText {
+    padding-bottom: 40px;
+  }
+
+  .Block13__iconTextTitle {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 145%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+
+    color: #ffffff;
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      transition: 0.5s;
+
+      &:hover {
+        color: #6975df;
+      }
+    }
+  }
+
+  .Block13__content {
+    padding: 0;
+    padding-right: 50px;
+  }
+
+  .Block13__mapBG {
+    cursor: pointer;
+    .Block13__mapBlur {
+      height: 395px;
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px);
+    }
+
+    &:hover {
+      img {
+        display: block;
+      }
+    }
+  }
+
+  .Block13__mapZoom {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    img {
+      position: absolute;
+      z-index: 10;
+      margin-top: -220px;
+      display: none;
+    }
+  }
+}

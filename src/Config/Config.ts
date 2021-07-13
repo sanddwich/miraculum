@@ -1,11 +1,11 @@
 import ConfigInterface from '../Redux/interfaces/AdditionalInterfaces/ConfigInterface'
 
 export const Config: ConfigInterface = {
-  url: 'http://localhost:3000/',
+  url: 'http://localhost:3000',
   deeSite: 'https://deedesign.ru',
   socialLinks: [
     { url: 'https://vk.com', socialLinkType: 'VK' },
-    { url: 'https://www.instagram.com/', socialLinkType: 'INSTA' },
+    { url: 'https://www.instagram.com', socialLinkType: 'INSTA' },
   ],
   letters: [
     '/img/61.jpg',
