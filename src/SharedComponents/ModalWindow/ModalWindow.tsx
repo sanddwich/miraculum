@@ -29,7 +29,7 @@ const ModalWindow = (props: ModalWindowProps) => {
 
   return (
     <div className="ModalWindow">
-      <div className="ModalWindow__container">
+      <div className="ModalWindow__container animated animate__fadeInUpBig">
         <Container fluid className="ModalWindow__header p-0">
           <Row className="m-0 h-100">
             <Col sm={10} xs={9} className="ModalWindow__headerTitle d-flex align-items-center">

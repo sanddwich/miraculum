@@ -1,16 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { YMaps, Map, Placemark } from 'react-yandex-maps'
+import ModalWindow from '../../../../../SharedComponents/ModalWindow/ModalWindow'
 import './Block13.scss'
 
 interface Block13Props {}
 
-export default function Block13(props: Block13Props) {
+const Block13 = (props: Block13Props) => {
+  const [showMap, setShowMap] = useState<boolean>(false)
+
   const mapOpen = (): void => {
-    console.log('mapOpen')
+    // props.setModalWindow(true)
   }
 
   return (
     <Container fluid className="Block13">
+      {showMap && (
+        <ModalWindow closeHandler={() => setShowMap(false)}>
+          <Container fluid className="Block13__yandexMap">
+            <YMaps>
+              <Map
+                className="Block13__yandexMapCont"
+                // onLoad={() => this.setLoading(false)}
+                defaultState={{ center: [46.35996821670819, 48.06899798147581], zoom: 15 }}
+              >
+                <Placemark geometry={[46.35996821670819, 48.06899798147581]} />
+              </Map>
+            </YMaps>
+          </Container>
+        </ModalWindow>
+      )}
       <Container className="Block13__Cont p-0">
         <Row className="Block13__Row m-0">
           <Col lg={6} className="Block13__content">
@@ -37,7 +56,7 @@ export default function Block13(props: Block13Props) {
             </Container>
           </Col>
           <Col lg={6} className="Block13__map p-0 d-flex justify-content-center align-items-center">
-            <Container fluid className="Block13__mapBG p-0" onClick={() => mapOpen()}>
+            <Container fluid className="Block13__mapBG p-0" onClick={() => setShowMap(true)}>
               <Container
                 fluid
                 className="p-0 Block13__mapBlur"
@@ -53,3 +72,5 @@ export default function Block13(props: Block13Props) {
     </Container>
   )
 }
+
+export default Block13

@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { connect } from 'react-redux'
+// import { connect } from 'react-redux'
 import { Config } from '../../../../../Config/Config'
-import { RootState } from '../../../../../Redux'
-import { setModalWindow } from '../../../../../Redux/actions/modal'
-import { ModalState } from '../../../../../Redux/interfaces/interfaces'
+// import { RootState } from '../../../../../Redux'
+// import { setModalWindow } from '../../../../../Redux/actions/modal'
+// import { ModalState } from '../../../../../Redux/interfaces/interfaces'
 import ModalWindow from '../../../../../SharedComponents/ModalWindow/ModalWindow'
 import './Block6.scss'
 
@@ -17,29 +17,32 @@ import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
 
-interface Block6Props {
-  setModalWindow: (isActive: boolean) => void
-  modal: ModalState
-}
+// interface Block6Props {
+//   setModalWindow: (isActive: boolean) => void
+//   modal: ModalState
+// }
+
+interface Block6Props {}
 
 const Block6 = (props: Block6Props) => {
   const [letters, setLetters] = useState<number>(5)
   const [modalSlider, setModalSlider] = useState<boolean>(false)
   const [activeSlide, setActiveSlide] = useState<string>(Config.letters[0])
+  const [modalActive, setModalActive] = useState<boolean>(false)
 
   const closeHandler = (): void => {
-    props.setModalWindow(false)
+    setModalActive(false)
   }
 
   const modalOpen = (slider: boolean = false, activeSlide: string = Config.letters[0]): void => {
     setActiveSlide(activeSlide)
     setModalSlider(slider)
-    props.setModalWindow(true)
+    setModalActive(true)
   }
 
   return (
     <Container className="Block6 p-0">
-      {props.modal.modalWindow.isActive && (
+      {modalActive && (
         <ModalWindow closeHandler={() => closeHandler()}>
           {modalSlider ? (
             <Swiper
@@ -121,15 +124,17 @@ const Block6 = (props: Block6Props) => {
   )
 }
 
-const mapDispatchToProps = {
-  setModalWindow,
-}
+// const mapDispatchToProps = {
+//   setModalWindow,
+// }
 
-function mapStateToProps(state: RootState) {
-  const modal = state.modal
-  return {
-    modal,
-  }
-}
+// function mapStateToProps(state: RootState) {
+//   const modal = state.modal
+//   return {
+//     modal,
+//   }
+// }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Block6)
+// export default connect(mapStateToProps, mapDispatchToProps)(Block6)
+
+export default Block6

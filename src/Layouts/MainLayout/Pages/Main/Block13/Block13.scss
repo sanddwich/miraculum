@@ -3,6 +3,26 @@
   padding-top: 150px;
   padding-bottom: 150px;
 
+  .ModalWindow {
+    .ModalWindow__body {
+      padding: 20px;
+
+      .Block13__yandexMap {
+        height: 100%;
+        .Block13__yandexMapCont {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .ModalWindow__container {
+    @media screen and(max-width:576px) {
+      top: 5%;  
+      bottom: 5%;
+    }
+  }
+
   @media screen and(max-width:576px) {
     padding: 20px;
     padding-top: 100px;
