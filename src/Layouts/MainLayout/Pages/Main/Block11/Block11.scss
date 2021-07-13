@@ -1,0 +1,51 @@
+.Block11 {
+  padding: 0;
+  padding-bottom: 100px;
+
+  @media screen and(max-width: 992px) {
+    margin-top: -100px;
+  }
+
+  .IconButton {
+    @media screen and(max-width: 576px) {
+      width: 100% !important;
+    }
+  }
+
+  .Block11__content {
+    padding: 0;
+    padding-right: 50px;
+
+    @media screen and(max-width: 576px) {
+      padding: 20px;
+    }
+
+    h1 {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 42px;
+      line-height: 130%;
+      color: #ffffff;
+      padding-bottom: 40px;
+
+      @media screen and(max-width: 576px) {
+        font-size: 26px;
+      }
+    }
+
+    p {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 145%;
+      color: #d9d9d9;
+      padding-bottom: 30px;
+
+      @media screen and(max-width: 576px) {
+        font-size: 16px;
+      }
+    }
+  }
+}

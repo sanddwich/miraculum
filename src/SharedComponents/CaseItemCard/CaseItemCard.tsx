@@ -12,7 +12,7 @@ export default function CaseItemCard(props: CaseItemCardProps) {
     <Container fluid className="CaseItemCard">
       <Row className="CaseItemCard__Row m-0">
         <Col xs={12} className="CaseItemCard__Col">
-          <div className="CaseItemCard__header d-flex align-items-center">
+          <div className="CaseItemCard__header d-flex align-items-top">
             <div className="CaseItemCard__img">
               <img src={props.caseItem.icon} alt={props.caseItem.title} />
             </div>

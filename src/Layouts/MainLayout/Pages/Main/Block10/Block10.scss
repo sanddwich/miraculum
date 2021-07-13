@@ -3,6 +3,12 @@
   padding-top: 150px;
   padding-bottom: 150px;
 
+  .Block10__button {
+    @media screen and(max-width: 1200px) {
+      margin-top: -30px !important;
+    }
+  }
+
   .Block10__buttonCol {
     @media screen and(max-width: 576px) {
       padding-left: 0;
@@ -80,7 +86,7 @@
       }
     }
 
-    @media screen and(max-width: 576px) {
+    @media screen and(max-width: 1200px) {
       padding: 0 !important;
       padding-bottom: 30px !important;
     }
@@ -90,10 +96,10 @@
       padding: 30px !important;
       margin-bottom: 30px;
 
-      .TaskItemCard__title {
+      .CaseItemCard__title {
         color: #000000;
       }
-      .TaskItemCard__text {
+      .CaseItemCard__text {
         color: #000000;
       }
     }
@@ -109,8 +115,11 @@
     padding-bottom: 60px;
   }
 
+  @media screen and(max-width: 992px) {
+    padding-top: 0px;
+  }
+
   @media screen and(max-width: 576px) {
-    padding-top: 100px;
     padding-bottom: 100px;
     padding-left: 20px;
     padding-right: 20px;

@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import Block1 from './Block1/Block1'
 import Block10 from './Block10/Block10'
+import Block11 from './Block11/Block11'
 import Block2 from './Block2/Block2'
 import Block3 from './Block3/Block3'
 import Block4 from './Block4/Block4'
@@ -30,6 +31,7 @@ class Main extends React.Component<MainProps, MainState> {
         <Block8 />
         <Block9 />
         <Block10 />
+        <Block11 />
       </Container>
     )
   }

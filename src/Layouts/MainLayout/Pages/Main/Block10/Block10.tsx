@@ -53,7 +53,7 @@ export default function Block10(props: Block10Props) {
   return (
     <Element name="Block10__cases">
       <Container className="Block10">
-        <h1>Кейсы</h1>
+        <h1>Выполненные работы</h1>
         {activeCase && (
           <Container key={activeCase.name} fluid className="Block10__case">
             <Row className="Block10__caseRow1 m-0">
@@ -70,28 +70,31 @@ export default function Block10(props: Block10Props) {
               <Col xl={5} className="Block10__caseCont">
                 <CaseItemCard caseItem={activeCase.caseItems[0]} />
               </Col>
-              <Col xl={4} className="Block10__caseCont">
+              <Col xl={4} className="Block10__caseCont" style={{ paddingLeft: 20 }}>
                 <CaseItemCard caseItem={activeCase.caseItems[1]} />
               </Col>
-              <Col xl={3} className="Block10__caseCont">
+              <Col xl={3} className="Block10__caseCont d-flex justify-content-between align-items-top d-xl-block">
                 <CaseItemCard caseItem={activeCase.caseItems[2]} />
-                <div className="Block10__separator"></div>
+                <div className="Block10__separator d-none d-xl-block"></div>
                 <CaseItemCard caseItem={activeCase.caseItems[3]} />
               </Col>
             </Row>
 
             <Container fluid className="Block10__tasks p-0">
-              <Row className="Block10__caseRow1 m-0">
-                <Col xl={6} lg={12} className="Block10__caseCol1 p-0">
-                  <TaskDropDownCard taskList={activeCase.tasks} />
-                </Col>
-              </Row>
-              {/* {activeTask && <h3>Задача: {activeTask.name}</h3>} */}
+              <TaskDropDownCard taskList={activeCase.tasks} />
               <Row className="Block10__caseRow m-0 justify-content-between">
-                <Col className="Block10__caseCont Block10__caseContSpecial" style={{ padding: 20 }}>
-                  {/* <TaskItemCard taskItem={taskItem} /> */}
+                <Col xl={5} className="Block10__caseCont Block10__caseContSpecial d-none d-xl-block" style={{ padding: 20 }}>
+                  <CaseItemCard caseItem={activeCase.caseItems[4]} />
                 </Col>
-                ){/* })} */}
+                <Col xl={4} className="Block10__caseCont" style={{ paddingTop: 20, paddingLeft: 20 }}>
+                  <CaseItemCard caseItem={activeCase.caseItems[5]} />
+                </Col>
+                <Col xl={3} className="Block10__caseCont" style={{ paddingTop: 20 }}>
+                  <CaseItemCard caseItem={activeCase.caseItems[6]} />
+                </Col>
+                <Col xl={5} className="Block10__caseCont Block10__caseContSpecial d-block d-xl-none" style={{ padding: 20 }}>
+                  <CaseItemCard caseItem={activeCase.caseItems[4]} />
+                </Col>
               </Row>
             </Container>
 
