@@ -1,10 +1,18 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { connect } from 'react-redux'
+import { RootState } from '../../../../../Redux'
 import CircleDot from '../../../../../SharedComponents/CircleDot/CircleDot'
 import IconButton from '../../../../../SharedComponents/IconButton/IconButton'
 import './Block1.scss'
+import { setModalForm, setModalThanks } from '../../../../../Redux/actions/modal'
+import { ModalState } from '../../../../../Redux/interfaces/interfaces'
 
-interface Block1 {}
+interface Block1 {
+  modal: ModalState
+  setModalForm: (isActive: boolean) => void
+  setModalThanks: (isActive: boolean) => void
+}
 
 const Block1 = (props: Block1) => {
   return (
@@ -30,6 +38,7 @@ const Block1 = (props: Block1) => {
                   icon="/icons/level.svg"
                   bgIconColor="#5B68DF"
                   width={300}
+                  onClickHandler={() => props.setModalForm(true)}
                 />
               </div>
             </div>
@@ -66,4 +75,16 @@ const Block1 = (props: Block1) => {
   )
 }
 
-export default Block1
+const mapDispatchToProps = {
+  setModalForm,
+  setModalThanks,
+}
+
+function mapStateToProps(state: RootState) {
+  const modal = state.modal
+  return {
+    modal,
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Block1)

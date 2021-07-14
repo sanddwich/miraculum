@@ -3,6 +3,17 @@ import ConfigInterface from '../Redux/interfaces/AdditionalInterfaces/ConfigInte
 export const Config: ConfigInterface = {
   url: 'http://localhost:3000',
   deeSite: 'https://deedesign.ru',
+  nameMinLength: 2,
+  phoneMinLength: 11,
+  mailSettings: {
+    apiPath: '/api/index.php',
+    senderMail: 'miraculum@deestore.ru',
+    senderMailInfo: 'Miraculum Info',
+    senderMailServer: 'ssl://mail.hostland.ru',
+    userName: '',
+    userPhone: '',
+    recipientMail: 'bck-dkiselev@yandex.ru',
+  },
   socialLinks: [
     { url: 'https://vk.com', socialLinkType: 'VK' },
     { url: 'https://www.instagram.com', socialLinkType: 'INSTA' },

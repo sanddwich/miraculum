@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Container } from 'react-bootstrap'
+import { propTypes } from 'react-bootstrap/esm/Image'
 import './IconButton.scss'
 
 interface IconButtonProps {
@@ -12,6 +13,7 @@ interface IconButtonProps {
   boxShadow?: string
   bgColor: string
   bgIconColor?: string
+  onClickHandler?: () => void
 }
 
 export default function IconButton(props: IconButtonProps) {
@@ -25,6 +27,7 @@ export default function IconButton(props: IconButtonProps) {
         backgroundColor: props.bgColor,
         height: props.height,
       }}
+      onClick={() => props.onClickHandler && props.onClickHandler()}
     >
       {props.icon && (
         <div

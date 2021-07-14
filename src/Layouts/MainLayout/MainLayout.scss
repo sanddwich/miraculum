@@ -4,4 +4,176 @@
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
+
+  .KisModalThanks {
+    .ModalWindow__container  {
+      width: 480px !important;
+      height: 350px !important;
+
+      @media screen and(max-width: 500px) {
+        width: 320px !important;
+        height: 350px !important;
+
+        h1 {
+          font-size: 24px;
+          padding-bottom: 20px !important;
+        }
+
+        p {
+          font-size: 12px;
+          line-height: 120%;
+          padding-bottom: 20px !important;
+        }
+
+        .IconButton {
+          width: 260px !important;
+        }
+      }
+    }
+  }
+
+  .KisModalForm, .KisModalThanks {
+    .ModalWindow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .ModalWindow__body {
+        height: 100%;
+      }
+
+      .ModalWindow__header {
+        height: auto;
+      }
+
+      .ModalWindow__headerTitle {
+        padding: 0;
+      }
+
+      .ModalWindow__close {
+        padding: 0;
+        svg {
+          margin-top: 10px;
+          margin-right: -10px;
+          position: absolute;
+        }
+      }
+
+      .ModalWindow__container {
+        padding: 0;
+        width: 420px;
+        height: 575px;
+        background-color: #1c1c1c;
+
+        position: relative;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+
+        @media screen and(max-width:440px) {
+          width: 320px;
+          height: 500px;
+        }
+
+        .ModalWindow__body {
+          padding: 0;
+        }
+
+        .KisModalForm__content {
+          width: 280px;
+
+          h1 {
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 145%;
+            text-transform: uppercase;
+
+            color: #ffffff;
+            padding-bottom: 15px;
+          }
+
+          h6 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 145%;
+            color: #ffffff;
+            padding-bottom: 20px;
+          }
+
+          p {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 135%;
+            text-align: center;
+            width: 100%;
+
+            color: #787878;
+
+            a {
+              color: #787878;
+              text-decoration: underline;
+              &:hover {
+                color: #6473fb;
+              }
+            }
+          }
+
+          @media screen and(max-width:440px) {
+            width: 240px;
+            h1 {
+              font-size: 20px;
+              padding-bottom: 10px;
+            }
+            h6 {
+              font-size: 12px;
+              padding-bottom: 10px;
+            }
+          }
+
+          .KisModalForm__formFieldCont {
+            // padding-bottom: 20px;
+
+            .KisModalForm__imgCont {
+              img {
+                position: absolute;
+                margin-top: -47px;
+                margin-left: 15px;
+              }
+            }
+
+            .KisModalForm__input {
+              width: 280px;
+              height: 70px;
+              background: #ffffff;
+              box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+              border-radius: 3px;
+              padding-left: 50px;
+              padding-right: 20px;
+
+              @media screen and(max-width:440px) {
+                width: 240px;
+              }
+            }
+
+            .KisModalForm__inputError {
+              color: #f17878;
+            }
+          }
+
+          @media screen and(max-width:440px) {
+            .IconButton {
+              width: 240px !important;
+            }
+          }
+        }
+      }
+    }
+  }
 }

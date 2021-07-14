@@ -29,4 +29,10 @@ export interface ModalState {
   modalWindow: {
     isActive: boolean
   }
+  modalForm: {
+    isActive: boolean
+  }
+  modalThanks: {
+    isActive: boolean
+  }
 }

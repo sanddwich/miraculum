@@ -66,6 +66,14 @@
     }
   }
 
+  .LoaderHorizontal {
+    .lds-ellipsis {
+      div {
+        background: #ffc83a;
+      }
+    }
+  }
+
   .IconButton {
     .IconButton__title {
       font-family: 'Roboto';
@@ -92,6 +100,26 @@
     padding-right: 30px;
     padding-bottom: 30px;
 
+    .KisModalForm__imgCont {
+      img {
+        position: absolute;
+        margin-top: -57px;
+        margin-left: 15px;
+      }
+    }
+    
+    .Block12__inputError {
+      font-family: 'Raleway';
+      font-style: normal;
+      font-weight: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 140%;
+      color: #f17878;
+      padding-top: 10px;
+      padding-left: 5px;
+    }
+
     .Block12__input {
       width: 300px;
       height: 80px;
@@ -106,6 +134,10 @@
       line-height: 145%;
       color: #5a5a5a;
       padding: 25px;
+
+      &.phone {
+        padding-left: 70px;
+      }
 
       &::placeholder {
         font-size: 20px;
