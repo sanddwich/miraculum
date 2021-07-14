@@ -161,7 +161,9 @@ const MainLayout = (props: MainLayoutProps) => {
                   title="Вернуться на сайт"
                   height={70}
                   width={280}
-                  onClickHandler={() => props.setModalThanks(false)}
+                  onClickHandler={() => {
+                    props.setModalThanks(false)
+                    document.querySelector('body')?.classList.remove('modal-open') }}
                 />
               </div>
             </Container>

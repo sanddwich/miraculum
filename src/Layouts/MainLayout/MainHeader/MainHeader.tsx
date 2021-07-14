@@ -42,28 +42,42 @@ const MainHeader = (props: MainHeaderProps) => {
             <div className="MainHeader__phone">
               <a href="tel:88512690339">8 (8512) 69-03-39</a>
             </div>
-            <div className="MainHeader__phoneTitle" onClick={() => props.setModalForm(true)}>Обратный звонок</div>
+            <div className="MainHeader__phoneTitle" onClick={() => props.setModalForm(true)}>
+              Обратный звонок
+            </div>
           </div>
         </Row>
         <Row className="MainHeader__Row2 m-0 d-none d-sm-flex justify-content-start">
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block4', 0)}>
-            Методы работы
-          </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block5', 0)}>
-            Решения
-          </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block6', 0)}>
-            О компании
-          </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block10__cases', 0)}>
-            Кейсы
-          </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block11', 0)}>
-            call-центр
-          </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block13', 0)}>
-            Контакты
-          </div>
+          <ScrollAnimation animateOnce={true} offset={0} animateIn="animate__fadeIn">
+            <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block4', 0)}>
+              Методы работы
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce={true} offset={0} delay={200} animateIn="animate__fadeIn">
+            <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block5', 0)}>
+              Решения
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce={true} offset={0} delay={400} animateIn="animate__fadeIn">
+            <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block6', 0)}>
+              О компании
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce={true} offset={0} delay={600} animateIn="animate__fadeIn">
+            <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block10__cases', 0)}>
+              Кейсы
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce={true} offset={0} delay={800} animateIn="animate__fadeIn">
+            <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block11', 0)}>
+              call-центр
+            </div>
+          </ScrollAnimation>
+          <ScrollAnimation animateOnce={true} offset={0} delay={1000} animateIn="animate__fadeIn">
+            <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block13', 0)}>
+              Контакты
+            </div>
+          </ScrollAnimation>
         </Row>
       </Container>
     </Container>

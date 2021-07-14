@@ -11,6 +11,7 @@ import { ModalState } from '../../../../../Redux/interfaces/interfaces'
 import ReactInputMask from 'react-input-mask'
 import LoaderHorizontal from '../../../../../SharedComponents/LoaderHorizontal/LoaderHorizontal'
 import { Element } from 'react-scroll'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 interface Block12Props {
   modal: ModalState
@@ -76,68 +77,76 @@ const Block12 = (props: Block12Props) => {
 
   return (
     <Element name="Block12">
-      <Container fluid className="Block12">
-        <Container className="Block12__Cont p-0">
-          <h1>Нужно провести исследование?</h1>
-          <h4>Оставьте свои контактные данные и мы перезвоним вам самостоятельно</h4>
+      <ScrollAnimation animateOnce={true} offset={200} animateIn="animate__fadeInUp">
+        <Container fluid className="Block12">
+          <Container className="Block12__Cont p-0">
+            <h1>Нужно провести исследование?</h1>
+            <h4>Оставьте свои контактные данные и мы перезвоним вам самостоятельно</h4>
 
-          <Row className="Block12__formFields m-0 justify-content-start align-items-top">
-            <div className="Block12__formFieldCont d-block">
-              <input
-                className="Block12__input"
-                type="text"
-                name="name"
-                placeholder="Ваше имя"
-                value={nameField}
-                onChange={(event) => nameChangeHandler(event?.target.value)}
-              />
-              <div className="KisModalForm__imgCont"></div>
-              {nameError && <div className="Block12__inputError">Не корректное заполнение поля</div>}
-            </div>
-            <div className="Block12__formFieldCont d-block">
-              <ReactInputMask
-                mask="9 (999) 999-99-99"
-                className={`Block12__input phone `}
-                type="tel"
-                name="phone"
-                placeholder="8 (900) 888-88-88"
-                value={phoneField}
-                onChange={(event) => phoneChangeHandler(event?.target.value)}
-              />
-              <div className="KisModalForm__imgCont">
-                <img src="/icons/flag.svg" alt="" />
-              </div>
-
-              {phoneError && <div className="Block12__inputError">Не корректное заполнение поля</div>}
-            </div>
-            <div className="Block12__formFieldCont">
-              {loading ? (
-                <LoaderHorizontal />
-              ) : (
-                <div className="KisModalForm__formFieldCont">
-                  <IconButton
-                    bgColor="#FFD467"
-                    borderRadius="3px"
-                    title="Отправить заявку"
-                    height={80}
-                    icon="/icons/leftArrowBlack.svg"
-                    bgIconColor="#FFC83A"
-                    width={300}
-                    onClickHandler={() => clickHandler()}
+            <Row className="Block12__formFields m-0 justify-content-start align-items-top">
+              <div className="Block12__formFieldCont d-block">
+                <ScrollAnimation animateOnce={true} offset={0} delay={1000} animateIn="animate__fadeIn">
+                  <input
+                    className="Block12__input"
+                    type="text"
+                    name="name"
+                    placeholder="Ваше имя"
+                    value={nameField}
+                    onChange={(event) => nameChangeHandler(event?.target.value)}
                   />
-                </div>
-              )}
-            </div>
-          </Row>
+                  <div className="KisModalForm__imgCont"></div>
+                  {nameError && <div className="Block12__inputError">Не корректное заполнение поля</div>}
+                </ScrollAnimation>
+              </div>
+              <div className="Block12__formFieldCont d-block">
+                <ScrollAnimation animateOnce={true} offset={0} delay={1200} animateIn="animate__fadeIn">
+                  <ReactInputMask
+                    mask="9 (999) 999-99-99"
+                    className={`Block12__input phone `}
+                    type="tel"
+                    name="phone"
+                    placeholder="8 (900) 888-88-88"
+                    value={phoneField}
+                    onChange={(event) => phoneChangeHandler(event?.target.value)}
+                  />
+                  <div className="KisModalForm__imgCont">
+                    <img src="/icons/flag.svg" alt="" />
+                  </div>
 
-          <p>
-            Нажимая на кнопку, вы соглашаетесь с{' '}
-            <a href={`${Config.url}/politic.pdf`} target="_blank">
-              политикой конфиденциальности
-            </a>
-          </p>
+                  {phoneError && <div className="Block12__inputError">Не корректное заполнение поля</div>}
+                </ScrollAnimation>
+              </div>
+              <div className="Block12__formFieldCont">
+                <ScrollAnimation animateOnce={true} offset={0} delay={1400} animateIn="animate__fadeIn">
+                  {loading ? (
+                    <LoaderHorizontal />
+                  ) : (
+                    <div className="KisModalForm__formFieldCont">
+                      <IconButton
+                        bgColor="#FFD467"
+                        borderRadius="3px"
+                        title="Отправить заявку"
+                        height={80}
+                        icon="/icons/leftArrowBlack.svg"
+                        bgIconColor="#FFC83A"
+                        width={300}
+                        onClickHandler={() => clickHandler()}
+                      />
+                    </div>
+                  )}
+                </ScrollAnimation>
+              </div>
+            </Row>
+
+            <p>
+              Нажимая на кнопку, вы соглашаетесь с{' '}
+              <a href={`${Config.url}/politic.pdf`} target="_blank">
+                политикой конфиденциальности
+              </a>
+            </p>
+          </Container>
         </Container>
-      </Container>
+      </ScrollAnimation>
     </Element>
   )
 }

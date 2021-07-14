@@ -4,6 +4,7 @@ import CommandCard from '../../../../../SharedComponents/CommandCard/CommandCard
 import HorLine from '../../../../../SharedComponents/HorLine/HorLine'
 import './Block8.scss'
 import { Element } from 'react-scroll'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 interface Block8Props {}
 
@@ -18,29 +19,35 @@ export default function Block8(props: Block8Props) {
           </div>
           <Row className="Block8__Row1 m-0">
             <Col className="Block8__Col d-none d-lg-flex">
-              <div className="Block8__title">
-                <h1>Команда MIRACULUM research group</h1>
-                <HorLine />
-              </div>
+              <ScrollAnimation animateOnce={true} offset={200} animateIn="animate__zoomIn">
+                <div className="Block8__title">
+                  <h1>Команда MIRACULUM research group</h1>
+                  <HorLine />
+                </div>
+              </ScrollAnimation>
             </Col>
             <Col lg={6} sm={12} className="Block8__Col p-0">
               <Container fluid className="p-0">
                 <Row className="m-0">
                   <Col sm={6} xs={12} className="Block8__cardCont d-flex justify-content-center">
-                    <CommandCard
-                      img="/img/81.jpg"
-                      nameSurname="Кормушин Олег"
-                      post="Руководитель"
-                      descr="Более 10 лет в исследованиях, серьезный опыт организации и контроля качества полевых и онлайн-исследований в регионах России, основатель профессионального исследовательского онлайн сообщества «Полстеры.рф»"
-                    />
+                    <ScrollAnimation animateOnce={true} offset={200} animateIn="animate__fadeInRight">
+                      <CommandCard
+                        img="/img/81.jpg"
+                        nameSurname="Кормушин Олег"
+                        post="Руководитель"
+                        descr="Более 10 лет в исследованиях, серьезный опыт организации и контроля качества полевых и онлайн-исследований в регионах России, основатель профессионального исследовательского онлайн сообщества «Полстеры.рф»"
+                      />
+                    </ScrollAnimation>
                   </Col>
                   <Col sm={6} xs={12} className="Block8__cardCont d-flex justify-content-center">
-                    <CommandCard
-                      img="/img/82.jpg"
-                      nameSurname="Кормушина Юлия"
-                      post="Руководитель исследовательских проектов"
-                      descr="Более 10 лет в исследованиях, модератор, аналитик, преподаватель исследовательских дисциплин в вузе"
-                    />
+                    <ScrollAnimation animateOnce={true} offset={200} delay={150} animateIn="animate__fadeInRight">
+                      <CommandCard
+                        img="/img/82.jpg"
+                        nameSurname="Кормушина Юлия"
+                        post="Руководитель исследовательских проектов"
+                        descr="Более 10 лет в исследованиях, модератор, аналитик, преподаватель исследовательских дисциплин в вузе"
+                      />
+                    </ScrollAnimation>
                   </Col>
                 </Row>
               </Container>

@@ -5,7 +5,7 @@ import { RootState } from '../../../../../Redux'
 import CircleDot from '../../../../../SharedComponents/CircleDot/CircleDot'
 import IconButton from '../../../../../SharedComponents/IconButton/IconButton'
 import './Block1.scss'
-import { setModalForm, setModalThanks } from '../../../../../Redux/actions/modal'
+import { setModalForm } from '../../../../../Redux/actions/modal'
 import { ModalState } from '../../../../../Redux/interfaces/interfaces'
 import { Element } from 'react-scroll'
 import ScrollAnimation from 'react-animate-on-scroll'
@@ -13,7 +13,6 @@ import ScrollAnimation from 'react-animate-on-scroll'
 interface Block1 {
   modal: ModalState
   setModalForm: (isActive: boolean) => void
-  setModalThanks: (isActive: boolean) => void
 }
 
 const Block1 = (props: Block1) => {
@@ -60,7 +59,7 @@ const Block1 = (props: Block1) => {
                 </ScrollAnimation>
               </div>
               <div className="Block1__circleDot2">
-                <ScrollAnimation animateOnce={true} offset={0} delay={1500} animateIn="animate__fadeIn">
+                <ScrollAnimation animateOnce={true} offset={0} delay={1400} animateIn="animate__fadeIn">
                   <CircleDot bgCircles="#ffffff" bgCirclesHover="#6473FB" diam={50}>
                     <div id="Miraclum__dotMessage">
                       <div className="Miraclum__dotMessageTitle">30 операторов</div>
@@ -70,7 +69,7 @@ const Block1 = (props: Block1) => {
                 </ScrollAnimation>
               </div>
               <div className="Block1__circleDot3">
-                <ScrollAnimation animateOnce={true} offset={0} delay={500} animateIn="animate__fadeIn">
+                <ScrollAnimation animateOnce={true} offset={0} delay={1200} animateIn="animate__fadeIn">
                   <CircleDot bgCircles="#ffffff" bgCirclesHover="#6473FB" diam={50}>
                     <div id="Miraclum__dotMessage">
                       <div className="Miraclum__dotMessageTitle">75+ регионов России</div>
@@ -91,7 +90,6 @@ const Block1 = (props: Block1) => {
 
 const mapDispatchToProps = {
   setModalForm,
-  setModalThanks,
 }
 
 function mapStateToProps(state: RootState) {

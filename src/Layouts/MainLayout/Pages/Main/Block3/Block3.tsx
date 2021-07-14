@@ -2,6 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import './Block3.scss'
 import { Element } from 'react-scroll'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 interface Block3Props {}
 
@@ -28,36 +29,48 @@ export default function Block3(props: Block3Props) {
             </Col>
             <Col sm={8} className="Block3__Right">
               <div className="Block3__list">
-                <div className="Block3__listEl d-flex justify-content-end">
-                  <div className="Block3__listElCont" style={{ width: '100%' }}>
-                    Собственников и управляющих действующего бизнеса
+                <ScrollAnimation animateOnce={true} offset={100} animateIn="animate__fadeInRight">
+                  <div className="Block3__listEl d-flex justify-content-end">
+                    <div className="Block3__listElCont" style={{ width: '100%' }}>
+                      Собственников и управляющих действующего бизнеса
+                    </div>
                   </div>
-                </div>
-                <div className="Block3__listEl d-flex justify-content-end">
-                  <div className="Block3__listElCont" style={{ width: '80%' }}>
-                    Управляющих запуском стартапов
+                </ScrollAnimation>
+                <ScrollAnimation animateOnce={true} offset={150} delay={200} animateIn="animate__fadeInRight">
+                  <div className="Block3__listEl d-flex justify-content-end">
+                    <div className="Block3__listElCont" style={{ width: '80%' }}>
+                      Управляющих запуском стартапов
+                    </div>
                   </div>
-                </div>
-                <div className="Block3__listEl d-flex justify-content-end">
-                  <div className="Block3__listElCont" style={{ width: '60%' }}>
-                    Маркетологов в компании
+                </ScrollAnimation>
+                <ScrollAnimation animateOnce={true} offset={150} delay={300} animateIn="animate__fadeInRight">
+                  <div className="Block3__listEl d-flex justify-content-end">
+                    <div className="Block3__listElCont" style={{ width: '60%' }}>
+                      Маркетологов в компании
+                    </div>
                   </div>
-                </div>
-                <div className="Block3__listEl d-flex justify-content-end">
-                  <div className="Block3__listElCont" style={{ width: '60%' }}>
-                    Исследователей в компании
+                </ScrollAnimation>
+                <ScrollAnimation animateOnce={true} offset={150} delay={400} animateIn="animate__fadeInRight">
+                  <div className="Block3__listEl d-flex justify-content-end">
+                    <div className="Block3__listElCont" style={{ width: '60%' }}>
+                      Исследователей в компании
+                    </div>
                   </div>
-                </div>
-                <div className="Block3__listEl d-flex justify-content-end">
-                  <div className="Block3__listElCont" style={{ width: '80%' }}>
-                    Продакт-менеджеров и команд в компании
+                </ScrollAnimation>
+                <ScrollAnimation animateOnce={true} offset={150} delay={500} animateIn="animate__fadeInRight">
+                  <div className="Block3__listEl d-flex justify-content-end">
+                    <div className="Block3__listElCont" style={{ width: '80%' }}>
+                      Продакт-менеджеров и команд в компании
+                    </div>
                   </div>
-                </div>
-                <div className="Block3__listEl d-flex justify-content-end">
-                  <div className="Block3__listElCont" style={{ width: '100%' }}>
-                    Исследовательских агентств и команд
+                </ScrollAnimation>
+                <ScrollAnimation animateOnce={true} offset={150} delay={600} animateIn="animate__fadeInRight">
+                  <div className="Block3__listEl d-flex justify-content-end">
+                    <div className="Block3__listElCont" style={{ width: '100%' }}>
+                      Исследовательских агентств и команд
+                    </div>
                   </div>
-                </div>
+                </ScrollAnimation>
               </div>
               <div className="MobileHorLineCont d-block d-sm-none" style={{ paddingTop: 50 }}>
                 <div className="MobileHorLine"></div>

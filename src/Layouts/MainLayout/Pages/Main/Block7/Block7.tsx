@@ -3,6 +3,7 @@ import { Container, Row } from 'react-bootstrap'
 import { Config } from '../../../../../Config/Config'
 import './Block7.scss'
 import { Element } from 'react-scroll'
+import ScrollAnimation from 'react-animate-on-scroll'
 
 interface Block7Props {}
 
@@ -16,7 +17,9 @@ export default function Block7(props: Block7Props) {
             {Config.partners.map((partner, index) => {
               return (
                 <div key={index} className="Block7__partner">
-                  <img className="img-fluid" src={partner.img} alt={partner.name} />
+                  <ScrollAnimation animateOnce={true} offset={200} delay={index * 150} animateIn="animate__fadeIn">
+                    <img className="img-fluid" src={partner.img} alt={partner.name} />
+                  </ScrollAnimation>
                 </div>
               )
             })}

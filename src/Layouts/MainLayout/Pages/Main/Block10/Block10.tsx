@@ -1,18 +1,24 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
+import { connect } from 'react-redux'
 import { scroller, Element } from 'react-scroll'
 import { Config } from '../../../../../Config/Config'
+import { RootState } from '../../../../../Redux'
 import CaseInterface from '../../../../../Redux/interfaces/AdditionalInterfaces/CaseInterface'
 import CaseDropDownCard from '../../../../../SharedComponents/CaseDropDownCard/CaseDropDownCard'
 import CaseItemCard from '../../../../../SharedComponents/CaseItemCard/CaseItemCard'
 import IconButton from '../../../../../SharedComponents/IconButton/IconButton'
 import TaskDropDownCard from '../../../../../SharedComponents/TaskDropDownCard/TaskDropDownCard'
-import TaskItemCard from '../../../../../SharedComponents/TaskItemCard/TaskItemCard'
+import { setModalForm } from '../../../../../Redux/actions/modal'
 import './Block10.scss'
+import { ModalState } from '../../../../../Redux/interfaces/interfaces'
 
-interface Block10Props {}
+interface Block10Props {
+  modal: ModalState
+  setModalForm: (isActive: boolean) => void
+}
 
-export default function Block10(props: Block10Props) {
+const Block10 = (props: Block10Props) => {
   const [cases, setCases] = useState<Array<CaseInterface>>(Config.cases)
   const [activeCase, setActiveCase] = useState<CaseInterface | undefined>(() => {
     const activeCaseTmp = Config.cases.find((caseItem) => caseItem.isActive === true)
@@ -111,6 +117,7 @@ export default function Block10(props: Block10Props) {
                   icon="/icons/arrowLeft.svg"
                   bgIconColor="#5B68DF"
                   width={300}
+                  onClickHandler={() => props.setModalForm(true)}
                 />
               </Col>
             </Row>
@@ -133,3 +140,16 @@ export default function Block10(props: Block10Props) {
     </Element>
   )
 }
+
+const mapDispatchToProps = {
+  setModalForm,
+}
+
+function mapStateToProps(state: RootState) {
+  const modal = state.modal
+  return {
+    modal,
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Block10)

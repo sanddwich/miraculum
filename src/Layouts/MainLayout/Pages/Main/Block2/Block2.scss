@@ -12,6 +12,13 @@
     }
   }
 
+  .hvr-grow:hover,
+  .hvr-grow:focus,
+  .hvr-grow:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
   h1 {
     font-family: 'Roboto';
     font-style: normal;
@@ -62,6 +69,7 @@
     border-top: 2px solid #ffd467;
     padding-top: 100px;
     .Block2__listEl {
+      width: 100%;
       padding: 20px;
       font-family: 'Raleway';
       font-style: normal;
