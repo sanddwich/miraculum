@@ -76,12 +76,12 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
         <Row className="MobileMenu__twoRow m-0">
           <Col className="MobileMenu__menuBlock p-2">
             <ul style={{ listStyleType: 'none' }}>
-              <li onClick={() => this.scrollTo('Block3', 0)}>Методы работы</li>
+              <li onClick={() => this.scrollTo('Block4', 0)}>Методы работы</li>
               <li onClick={() => this.scrollTo('Block5', 0)}>Решения</li>
-              <li onClick={() => this.scrollTo('Rating', 0)}>О компании</li>
-              <li onClick={() => this.scrollTo('Consulting', 0)}>Кейсы</li>
-              <li onClick={() => this.scrollTo('Services', 0)}>call-центр</li>
-              <li onClick={() => this.scrollTo('Trust', 0)}>Контакты</li>
+              <li onClick={() => this.scrollTo('Block6', 0)}>О компании</li>
+              <li onClick={() => this.scrollTo('Block10__cases', 0)}>Кейсы</li>
+              <li onClick={() => this.scrollTo('Block11', 0)}>call-центр</li>
+              <li onClick={() => this.scrollTo('Block13', 0)}>Контакты</li>
             </ul>
           </Col>
         </Row>

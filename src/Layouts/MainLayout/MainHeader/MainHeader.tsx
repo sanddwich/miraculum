@@ -4,12 +4,14 @@ import { connect } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import { scroller } from 'react-scroll'
 import { RootState } from '../../../Redux'
-import { setMobileMenu } from '../../../Redux/actions/modal'
+import { setMobileMenu, setModalForm } from '../../../Redux/actions/modal'
 import MiraclumLogo from '../../../SharedComponents/MiraclumLogo/MiraclumLogo'
+import ScrollAnimation from 'react-animate-on-scroll'
 import './MainHeader.scss'
 
 interface MainHeaderProps {
   setMobileMenu: (isActive: boolean) => void
+  setModalForm: (isActive: boolean) => void
 }
 
 const MainHeader = (props: MainHeaderProps) => {
@@ -40,26 +42,26 @@ const MainHeader = (props: MainHeaderProps) => {
             <div className="MainHeader__phone">
               <a href="tel:88512690339">8 (8512) 69-03-39</a>
             </div>
-            <div className="MainHeader__phoneTitle">Обратный звонок</div>
+            <div className="MainHeader__phoneTitle" onClick={() => props.setModalForm(true)}>Обратный звонок</div>
           </div>
         </Row>
         <Row className="MainHeader__Row2 m-0 d-none d-sm-flex justify-content-start">
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('AnkorName', 0)}>
+          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block4', 0)}>
             Методы работы
           </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('AnkorName', 0)}>
+          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block5', 0)}>
             Решения
           </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('AnkorName', 0)}>
+          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block6', 0)}>
             О компании
           </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('AnkorName', 0)}>
+          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block10__cases', 0)}>
             Кейсы
           </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('AnkorName', 0)}>
+          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block11', 0)}>
             call-центр
           </div>
-          <div className="MainHeader__navbarEl" onClick={() => scrollTo('AnkorName', 0)}>
+          <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block13', 0)}>
             Контакты
           </div>
         </Row>
@@ -70,6 +72,7 @@ const MainHeader = (props: MainHeaderProps) => {
 
 const mapDispatchToProps = {
   setMobileMenu,
+  setModalForm,
 }
 
 const mapStateToProps = (state: RootState) => {

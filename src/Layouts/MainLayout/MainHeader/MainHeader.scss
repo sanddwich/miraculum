@@ -40,6 +40,11 @@
       a {
         text-decoration: none;
         color: #ffffff;
+        transition: .5s;
+
+        &:hover {
+          color: #6473FB;
+        }
       }
     }
 
@@ -63,6 +68,7 @@
       line-height: 130%;
       text-align: right;
       color: #ffffff;
+      cursor: pointer;
     }
 
     .MainHeader__navbarEl {

@@ -5,6 +5,8 @@
     position: absolute;
     padding: 30px;
     animation-duration: .5s;
+    display: flex;
+    align-items: center;
 
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
