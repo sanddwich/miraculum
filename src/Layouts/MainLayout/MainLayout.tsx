@@ -78,6 +78,9 @@ const MainLayout = (props: MainLayoutProps) => {
         console.log(error)
       })
       .finally(() => setLoading(false))
+
+    // props.setModalForm(false)
+    // props.setModalThanks(true)
   }
 
   return (
@@ -163,7 +166,8 @@ const MainLayout = (props: MainLayoutProps) => {
                   width={280}
                   onClickHandler={() => {
                     props.setModalThanks(false)
-                    document.querySelector('body')?.classList.remove('modal-open') }}
+                    document.querySelector('body')?.classList.remove('modal-open')
+                  }}
                 />
               </div>
             </Container>

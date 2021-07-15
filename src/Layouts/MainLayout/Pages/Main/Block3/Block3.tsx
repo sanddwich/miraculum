@@ -21,9 +21,9 @@ export default function Block3(props: Block3Props) {
             <div className="MobileHorLine"></div>
           </div>
           <Row className="Block3__Row m-0">
-            <Col sm={4} className="Block3__Left d-flex justify-content-between align-items-center">
+            <Col sm={4} className="Block3__Left d-flex justify-content-start justify-content-md-between align-items-center">
               <div className="Block3__LeftTitle">Для кого</div>
-              <div className="Block3__LeftImg d-none d-md-block">
+              <div className="Block3__LeftImg d-flex d-md-block">
                 <img className="Block3__icon img-fluid" src="/img/31.svg" alt="" />
               </div>
             </Col>
@@ -31,14 +31,14 @@ export default function Block3(props: Block3Props) {
               <div className="Block3__list">
                 <ScrollAnimation animateOnce={true} offset={100} animateIn="animate__fadeInRight">
                   <div className="Block3__listEl d-flex justify-content-end">
-                    <div className="Block3__listElCont" style={{ width: '100%' }}>
+                    <div className="Block3__listElCont" style={{ width: '100%'}}>
                       Собственников и управляющих действующего бизнеса
                     </div>
                   </div>
                 </ScrollAnimation>
                 <ScrollAnimation animateOnce={true} offset={150} delay={200} animateIn="animate__fadeInRight">
                   <div className="Block3__listEl d-flex justify-content-end">
-                    <div className="Block3__listElCont" style={{ width: '80%' }}>
+                    <div className="Block3__listElCont" style={{ width: '80%', backgroundColor: '#333333' }}>
                       Управляющих запуском стартапов
                     </div>
                   </div>
@@ -52,7 +52,7 @@ export default function Block3(props: Block3Props) {
                 </ScrollAnimation>
                 <ScrollAnimation animateOnce={true} offset={150} delay={400} animateIn="animate__fadeInRight">
                   <div className="Block3__listEl d-flex justify-content-end">
-                    <div className="Block3__listElCont" style={{ width: '60%' }}>
+                    <div className="Block3__listElCont" style={{ width: '60%', backgroundColor: '#333333' }}>
                       Исследователей в компании
                     </div>
                   </div>
@@ -66,7 +66,7 @@ export default function Block3(props: Block3Props) {
                 </ScrollAnimation>
                 <ScrollAnimation animateOnce={true} offset={150} delay={600} animateIn="animate__fadeInRight">
                   <div className="Block3__listEl d-flex justify-content-end">
-                    <div className="Block3__listElCont" style={{ width: '100%' }}>
+                    <div className="Block3__listElCont" style={{ width: '100%', backgroundColor: '#333333' }}>
                       Исследовательских агентств и команд
                     </div>
                   </div>

@@ -47,6 +47,13 @@ const MainHeader = (props: MainHeaderProps) => {
             </div>
           </div>
         </Row>
+
+        <Row className="MainHeader__phoneNumber m-0 d-sm-none">
+          <div className="MainHeader__phone">
+            <a href="tel:88512690339" style={{color: '#FFD467'}}>8 (8512) 69-03-39</a>
+          </div>
+        </Row>
+
         <Row className="MainHeader__Row2 m-0 d-none d-sm-flex justify-content-start">
           <ScrollAnimation animateOnce={true} offset={0} animateIn="animate__fadeIn">
             <div className="MainHeader__navbarEl" onClick={() => scrollTo('Block4', 0)}>

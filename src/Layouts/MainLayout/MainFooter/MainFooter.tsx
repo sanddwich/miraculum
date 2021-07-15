@@ -1,12 +1,17 @@
 import React from 'react'
 import { Container, Row } from 'react-bootstrap'
+import { connect } from 'react-redux'
 import { Config } from '../../../Config/Config'
+import { RootState } from '../../../Redux'
 import SocialLink from '../../../Redux/interfaces/AdditionalInterfaces/SocialLink'
 import SocialLinkType from '../../../Redux/interfaces/AdditionalInterfaces/SocialLinkType'
 import MiraclumLogo from '../../../SharedComponents/MiraclumLogo/MiraclumLogo'
+import { setModalForm } from '../../../Redux/actions/modal'
 import './MainFooter.scss'
 
-interface MainFooterProps {}
+interface MainFooterProps {
+  setModalForm: (isActive: boolean) => void
+}
 
 const MainFooter = (props: MainFooterProps) => {
   const externalLink = (socialLinkType: SocialLinkType): void => {
@@ -29,7 +34,7 @@ const MainFooter = (props: MainFooterProps) => {
           </div>
 
           <div className="MainFooter__container d-block" style={{paddingRight: 100}}>
-            <div className="MainFooter__text">Обратный звонок</div>
+            <div className="MainFooter__text" onClick={() => props.setModalForm(true)}>Обратный звонок</div>
             <div className="MainFooter__text d-none d-md-block" style={{paddingTop: 62}}>
               <a href={Config.deeSite}>Сайт разработан – deedesign</a>
             </div>
@@ -56,4 +61,15 @@ const MainFooter = (props: MainFooterProps) => {
   )
 }
 
-export default MainFooter
+const mapDispatchToProps = {
+  setModalForm,
+}
+
+const mapStateToProps = (state: RootState) => {
+  const modal = state.modal
+  return {
+    modal,
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainFooter)

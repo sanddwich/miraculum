@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { RootState } from '../../Redux'
 import { ModalState } from '../../Redux/interfaces/interfaces'
-import { setMobileMenu } from '../../Redux/actions/modal'
+import { setMobileMenu, setModalForm } from '../../Redux/actions/modal'
 import './MobileMenu.scss'
 import { connect } from 'react-redux'
 import { scroller } from 'react-scroll'
@@ -10,6 +10,7 @@ import ScrollAnimation from 'react-animate-on-scroll'
 import IconButton from '../IconButton/IconButton'
 
 interface MobileMenuProps {
+  setModalForm: (isActive: boolean) => void
   setMobileMenu: (isActive: boolean) => void
   modal: ModalState
 }
@@ -91,7 +92,7 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
               <div className="MobileMenu__phoneNumber">
                 <a href="tel:88512690339">8 (8512) 69-03-39</a>
               </div>
-              <div className="MainHeader__phoneTitle">Обратный звонок</div>
+              <div className="MainHeader__phoneTitle" onClick={() => this.props.setModalForm(true)}>Обратный звонок</div>
             </div>
           </ScrollAnimation>
         </Row>
@@ -105,6 +106,7 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
               icon="/icons/level.svg"
               bgIconColor="#5B68DF"
               width={300}
+              onClickHandler={() => this.props.setModalForm(true)}
             />
           </ScrollAnimation>
         </Row>
@@ -115,6 +117,7 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
 
 const mapDispatchToProps = {
   setMobileMenu,
+  setModalForm,
 }
 
 const mapStateToProps = (state: RootState) => {
