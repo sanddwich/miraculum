@@ -1,5 +1,12 @@
 .Block6 {
   .ModalWindow {
+    .ModalWindow__body {
+      // padding-top: 200px;
+      img {
+        width: 500px;
+      }
+    }
+
     @media screen and(max-width:576px) {
       .ModalWindow__container {
         top: 10%;

@@ -77,17 +77,7 @@ export default function Block9(props: Block9Props) {
   ])
 
   const getActiveCardImage = (): string | undefined => {
-    const imgs: (string | undefined)[] = areaCards.map((card) => {
-      if (card.isActive) {
-        return card.img
-      }
-    })
-
-    if (imgs[0]) {
-      return imgs[0]
-    } else {
-      return undefined
-    }
+    return areaCards.find(card => card.isActive === true)?.img
   }
 
   const setActiveAreaCadr = (id: number): void => {

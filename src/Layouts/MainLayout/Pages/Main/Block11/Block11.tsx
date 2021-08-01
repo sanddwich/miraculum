@@ -4,10 +4,15 @@ import IconButton from '../../../../../SharedComponents/IconButton/IconButton'
 import './Block11.scss'
 import { Element } from 'react-scroll'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { Config } from '../../../../../Config/Config'
 
 interface Block11Props {}
 
 export default function Block11(props: Block11Props) {
+  const clickHandler = (): void => {
+    window.open(`${Config.url}/present.pdf`)
+  }
+
   return (
     <Element name="Block11">
       <ScrollAnimation animateOnce={true} offset={200} animateIn="animate__fadeInUp">
@@ -31,6 +36,7 @@ export default function Block11(props: Block11Props) {
                 icon="/icons/11_1.svg"
                 bgIconColor="#5B68DF"
                 width={355}
+                onClickHandler={() => clickHandler()}
               />
             </Col>
             <Col lg={6} className="Block11__img p-0 d-none d-lg-flex align-items-center">

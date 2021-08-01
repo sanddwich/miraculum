@@ -2,6 +2,7 @@ import ConfigInterface from '../Redux/interfaces/AdditionalInterfaces/ConfigInte
 
 export const Config: ConfigInterface = {
   url: 'http://localhost:3000',
+  // url: 'https://miraculum-rg.ru',
   deeSite: 'https://deedesign.ru',
   nameMinLength: 2,
   phoneMinLength: 11,
@@ -13,21 +14,20 @@ export const Config: ConfigInterface = {
     userName: '',
     userPhone: '',
     recipientMail: 'bck-dkiselev@yandex.ru',
+    // recipientMail: 'miraculum.rg@mail.ru',
   },
   socialLinks: [
-    { url: 'https://vk.com', socialLinkType: 'VK' },
-    { url: 'https://www.instagram.com', socialLinkType: 'INSTA' },
+    { url: 'https://vk.com/miraculum_research_group', socialLinkType: 'VK' },
+    { url: 'https://www.instagram.com/miraculum.rg/', socialLinkType: 'INSTA' },
   ],
   letters: [
     '/img/61.jpg',
-    '/img/61.jpg',
-    '/img/61.jpg',
-    '/img/61.jpg',
-    '/img/61.jpg',
-    '/img/61.jpg',
-    '/img/61.jpg',
-    '/img/61.jpg',
-    '/img/61.jpg',
+    '/img/62.jpg',
+    '/img/63.jpg',
+    '/img/64.jpg',
+    '/img/65.jpg',
+    '/img/66.jpg',
+    '/img/67.jpg',
   ],
   partners: [
     { name: 'ПРОГРЕСС ДЕВЕЛОПЕРСКАЯ КОМПАНИЯ', img: '/img/71.png' },
