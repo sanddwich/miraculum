@@ -1,8 +1,8 @@
 import ConfigInterface from '../Redux/interfaces/AdditionalInterfaces/ConfigInterface'
 
 export const Config: ConfigInterface = {
-  url: 'http://localhost:3000',
-  // url: 'https://miraculum-rg.ru',
+  // url: 'http://localhost:3000',
+  url: 'https://miraculum-rg.ru',
   deeSite: 'https://deedesign.ru',
   nameMinLength: 2,
   phoneMinLength: 11,
@@ -13,8 +13,8 @@ export const Config: ConfigInterface = {
     senderMailServer: 'ssl://mail.hostland.ru',
     userName: '',
     userPhone: '',
-    recipientMail: 'bck-dkiselev@yandex.ru',
-    // recipientMail: 'miraculum.rg@mail.ru',
+    // recipientMail: 'bck-dkiselev@yandex.ru',
+    recipientMail: 'miraculum.rg@mail.ru',
   },
   socialLinks: [
     { url: 'https://vk.com/miraculum_research_group', socialLinkType: 'VK' },

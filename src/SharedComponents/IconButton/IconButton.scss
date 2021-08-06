@@ -9,6 +9,20 @@
 
   .IconButton__title {
     padding: 20px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 145%;
+    /* or 26px */
+
+    text-align: center;
+
+    @media screen and(max-width: 576px) {
+      font-size: 14px;
+      font-weight: 400;
+    }
   }
 }
 
