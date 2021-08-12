@@ -16,12 +16,12 @@ export default function Block4(props: Block4Props) {
           <Row className="Block4__Row1 m-0">
             <Col lg={6} xs={12} className="Block4__Col">
               <MethodCard bgColor="#3C3C3C" title="Телефонные опросы (CATI)">
-                С использованием автоматической случайной генерации телефонных номеров
+                Опросы респондентов по телефону с использованием автоматической случайной генерации телефонных номеров
               </MethodCard>
             </Col>
             <Col lg={6} xs={12} className="Block4__Col">
               <MethodCard bgColor="#3C3C3C" title="Онлайн-фокус-группы">
-                Очные групповые дискуссии потребителей под руководством модератора
+                Групповые дискуссии с потребителями в режиме онлайн
               </MethodCard>
             </Col>
           </Row>

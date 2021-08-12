@@ -19,7 +19,8 @@ export default function Block2(props: Block2Props) {
         <Row className="Block2__Row">
           <Col md={6} className="Block2__Left d-flex justify-content-end align-items-center">
             <ScrollAnimation animateOnce={true} offset={150} duration={2} delay={500} animateIn="animate__fadeIn">
-              <img className="img-fluid" src="/img/21.png" alt="" />
+              <img className="img-fluid w370" src="/img/21.png" alt="" />
+              <img className="img-fluid w0" src="/img/21_mob.png" alt="" />
             </ScrollAnimation>
           </Col>
           <Col md={6} className="Block2__Right">

@@ -15,7 +15,7 @@ export default function Block5(props: Block5Props) {
           <h1>Решения</h1>
           <Row className="Block5__Row1 m-0">
             <Col lg={6} xs={12} className="Block5__Col">
-              <SolutionCard title="Customer Journey (CJM)" icon="/icons/arrowDown.svg">
+              <SolutionCard title="Customer Journey Map (CJM)" icon="/icons/arrowDown.svg">
                 Путь клиента к покупке для определения проблемных точек в процессе
               </SolutionCard>
             </Col>

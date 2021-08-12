@@ -26,12 +26,16 @@
   }
 
   .Block9__right {
-    img {
+    .Block9__fadeImg {
       animation-duration: 1s;
-      margin-top: -100px;
-      margin-right: -130px;
-      -webkit-transform: scale(1.3);
-      transform: scale(1.3);
+    }
+
+    img {
+      // animation-duration: 1s;
+      // margin-top: -100px;
+      // margin-right: -130px;
+      // -webkit-transform: scale(1.3);
+      // transform: scale(1.3);
 
       @media screen and(max-width: 1400px) {
         margin: 0;

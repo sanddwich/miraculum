@@ -51,12 +51,32 @@
       padding-bottom: 90px;
     }
 
+    .w370 {
+      display: block;
+    }
+
+    .w0 {
+      display: none;
+    }
+
     @media screen and(max-width: 768px) {
       border-bottom: none;
+      padding-left: 20px;
+      // padding-right: 20px;
 
       img {
         padding-top: 20px;
         padding-bottom: 0px;
+      }
+    }
+
+    @media screen and(max-width: 370px) {
+      .w370 {
+        display: none;
+      }
+
+      .w0 {
+        display: block;
       }
     }
   }
@@ -98,6 +118,7 @@
 
     @media screen and(max-width: 768px) {
       border-top: none;
+      padding-top: 40px;
     }
   }
 }

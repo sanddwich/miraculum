@@ -77,7 +77,7 @@ export default function Block9(props: Block9Props) {
   ])
 
   const getActiveCardImage = (): string | undefined => {
-    return areaCards.find(card => card.isActive === true)?.img
+    return areaCards.find((card) => card.isActive === true)?.img
   }
 
   const setActiveAreaCadr = (id: number): void => {
@@ -126,7 +126,9 @@ export default function Block9(props: Block9Props) {
               </Col>
               <Col lg={4} className="Block9__right p-0 d-flex justify-content-center align-items-center">
                 {getActiveCardImage() && (
-                  <img className="img-fluid animated animate__fadeIn" src={getActiveCardImage()} alt="" />
+                  <div key={getActiveCardImage()} className="Block9__fadeImg animated animate__zoomIn">
+                    <img className="img-fluid" src={getActiveCardImage()} alt="" />
+                  </div>
                 )}
               </Col>
             </Row>

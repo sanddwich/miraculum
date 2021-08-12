@@ -31,7 +31,7 @@ const Block1 = (props: Block1) => {
               <ScrollAnimation animateOnce={true} offset={0} animateIn="animate__fadeInLeft">
                 <div className="Block1__blurCard d-flex align-items-center">
                   <div>
-                    <h1>Маркетинговые иследования</h1>
+                    <h1>Маркетинговые исcледования</h1>
                     <p>Проводим исследования предпочтений потребителей и развития продукта</p>
                     <IconButton
                       bgColor="#6473FB"

@@ -14,7 +14,7 @@ interface AreaCardProps {
 
 export default function AreaCard(props: AreaCardProps) {
   return (
-    <Container fluid className="AreaCard h-100 hvr-grow" onClick={() => props.onclickHandler()}>
+    <Container fluid className="AreaCard h-100 hvr-grow" onMouseEnter={() => props.onclickHandler()}>
       <Row
         className="AreaCard__Row m-0 justify-content-lg-between align-items-center h-100"
         style={{
