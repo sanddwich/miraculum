@@ -1,10 +1,58 @@
 .Block6 {
   .ModalWindow {
+    .ModalWindow__container {
+      background: transparent;
+    }
+
     .ModalWindow__body {
-      // padding-top: 200px;
-      img {
-        width: 500px;
+      margin-top: 40px;
+      padding-top: 0px;
+
+      height: 100%;
+      /* полоса прокрутки (скроллбар) */
+      &::-webkit-scrollbar {
+        width: 0px; /* ширина для вертикального скролла */
+        height: 0px; /* высота для горизонтального скролла */
       }
+
+      /* ползунок скроллбара */
+      &::-webkit-scrollbar-thumb {
+        background-color: #6473fb;
+        // color: #5e5e5e;
+      }
+
+      @media screen and(max-width: 400px) {
+        .swiper-slide {
+          height: 600px !important;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      img {
+        width: 800px;
+      }
+    }
+
+    .ModalWindow__close {
+      position: relative;
+      z-index: 100;
+      margin-top: -30px;
+      padding: 0;
+      svg {
+        transition: all ease-in-out 0.2s;
+        fill: #8f8f8f;
+      }
+
+      &:hover {
+        svg {
+          fill: #6473fb;
+        }
+      }
+    }
+
+    .ModalWindow__header {
+      height: 0;
     }
 
     @media screen and(max-width:576px) {
@@ -20,6 +68,10 @@
       .ModalWindow__container {
         top: 10%;
         bottom: 10%;
+      }
+
+      .ModalWindow__close {
+        margin-top: 50px;
       }
     }
   }

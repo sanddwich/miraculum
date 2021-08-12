@@ -54,14 +54,7 @@ const Block6 = (props: Block6Props) => {
                   prevEl: '#Block2__PrewArrow',
                 }}
                 spaceBetween={10}
-                breakpoints={{
-                  992: {
-                    slidesPerView: 2,
-                  },
-                  768: {
-                    slidesPerView: 1,
-                  },
-                }}
+                slidesPerView={1}
                 autoplay={{
                   delay: 5000,
                 }}
@@ -69,7 +62,7 @@ const Block6 = (props: Block6Props) => {
                 {Config.letters.map((img, index) => {
                   return (
                     <SwiperSlide key={index}>
-                      <Container fluid className="p-0 d-flex justify-content-center align-items-center">
+                      <Container fluid className="p-0 d-flex justify-content-center">
                         <img className="img-fluid" src={img} alt="" />
                       </Container>
                     </SwiperSlide>
@@ -77,7 +70,7 @@ const Block6 = (props: Block6Props) => {
                 })}
               </Swiper>
             ) : (
-              <Container fluid className="p-0 d-flex justify-content-center align-items-center">
+              <Container fluid className="p-0 d-flex justify-content-center">
                 <img className="img-fluid" src={activeSlide} alt="" />
               </Container>
             )}

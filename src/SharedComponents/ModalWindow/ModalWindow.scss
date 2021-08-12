@@ -39,6 +39,7 @@
     padding-bottom: 20px;
     height: 90%;
     overflow-y: scroll;
+    align-items: start !important;
 
     @media screen and(max-width: 576px) {
       padding: 10px;

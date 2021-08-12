@@ -126,7 +126,7 @@ export default function Block9(props: Block9Props) {
               </Col>
               <Col lg={4} className="Block9__right p-0 d-flex justify-content-center align-items-center">
                 {getActiveCardImage() && (
-                  <div key={getActiveCardImage()} className="Block9__fadeImg animated animate__zoomIn">
+                  <div key={getActiveCardImage()} className="Block9__fadeImg animated animate__fadeIn">
                     <img className="img-fluid" src={getActiveCardImage()} alt="" />
                   </div>
                 )}
