@@ -45,7 +45,7 @@ export default function Block9(props: Block9Props) {
       bgColor: '#3C3C3C',
       borderRadius: '4px',
       colWidth: 7,
-      img: '/img/93.png',
+      img: '/img/97.png',
     },
     {
       icon: '/icons/94.svg',

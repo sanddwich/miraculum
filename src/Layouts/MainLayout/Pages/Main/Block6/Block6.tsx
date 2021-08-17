@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { ArrowRightSquareFill, ArrowLeftSquareFill } from 'react-bootstrap-icons';
+import { ArrowRightSquareFill, ArrowLeftSquareFill } from 'react-bootstrap-icons'
 // import { connect } from 'react-redux'
 import { Config } from '../../../../../Config/Config'
 // import { RootState } from '../../../../../Redux'
@@ -20,7 +20,7 @@ import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
 
 // install Swiper modules
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+SwiperCore.use([Navigation, Pagination, Autoplay])
 
 // interface Block6Props {
 //   setModalWindow: (isActive: boolean) => void
@@ -49,15 +49,17 @@ const Block6 = (props: Block6Props) => {
     <Element name="Block6">
       <Container className="Block6 p-0">
         {modalActive && modalSlider && (
-          <div className="Block6__navigationPagination">
-            <div className="Block6__navigation d-flex justify-content-center">
-              <div className="Block6__navigationArrows">
-                <div id="Block2__PrewArrow"><ArrowLeftSquareFill color={`#6473fb`} size={40} /></div>
-                <div id="Block2__NextArrow"><ArrowRightSquareFill  color={`#6473fb`} size={40} /></div>
+          <div className="Block6__navigationPaginationCont">
+            <div className="Block6__navigationPagination d-flex justify-content-between">
+              <div id="Block2__PrewArrow" className="Block2__Arrow">
+                <ArrowLeftSquareFill color={`#6473fb`} size={40} />
               </div>
-            </div>
-            <div className="Block6__pagination">
-              <div className="swiper-pagination"></div>
+              <div className="Block6__pagination d-flex justify-content-center align-items-center">
+                <div className="swiper-pagination"></div>
+              </div>
+              <div id="Block2__NextArrow" className="Block2__Arrow">
+                <ArrowRightSquareFill color={`#6473fb`} size={40} />
+              </div>
             </div>
           </div>
         )}
@@ -78,8 +80,7 @@ const Block6 = (props: Block6Props) => {
                 }}
                 pagination={{
                   clickable: true,
-                  bulletActiveClass: 'bulletActive',
-                  bulletClass: 'bullet',
+                  el: '.swiper-pagination',
                 }}
               >
                 {Config.letters.map((img, index) => {
