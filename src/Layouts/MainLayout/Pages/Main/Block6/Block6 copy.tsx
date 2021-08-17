@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
-import { ArrowRightSquareFill, ArrowLeftSquareFill } from 'react-bootstrap-icons';
 // import { connect } from 'react-redux'
 import { Config } from '../../../../../Config/Config'
 // import { RootState } from '../../../../../Redux'
@@ -18,9 +17,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper.scss'
 import 'swiper/components/navigation/navigation.scss'
 import 'swiper/components/pagination/pagination.scss'
-
-// install Swiper modules
-SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 // interface Block6Props {
 //   setModalWindow: (isActive: boolean) => void
@@ -48,56 +44,56 @@ const Block6 = (props: Block6Props) => {
   return (
     <Element name="Block6">
       <Container className="Block6 p-0">
-        {modalActive && modalSlider && (
-          <div className="Block6__navigationPagination">
-            <div className="Block6__navigation d-flex justify-content-center">
-              <div className="Block6__navigationArrows">
-                <div id="Block2__PrewArrow"><ArrowLeftSquareFill color={`#6473fb`} size={40} /></div>
-                <div id="Block2__NextArrow"><ArrowRightSquareFill  color={`#6473fb`} size={40} /></div>
-              </div>
-            </div>
-            <div className="Block6__pagination">
-              <div className="swiper-pagination"></div>
-            </div>
-          </div>
-        )}
-
         {modalActive && (
-          <ModalWindow closeHandler={() => closeHandler()}>
-            {modalSlider ? (
-              <Swiper
-                loop={false}
-                navigation={{
-                  nextEl: '#Block2__NextArrow',
-                  prevEl: '#Block2__PrewArrow',
-                }}
-                spaceBetween={10}
-                slidesPerView={1}
-                autoplay={{
-                  delay: 5000,
-                }}
-                pagination={{
-                  clickable: true,
-                  bulletActiveClass: 'bulletActive',
-                  bulletClass: 'bullet',
-                }}
-              >
-                {Config.letters.map((img, index) => {
-                  return (
-                    <SwiperSlide key={index}>
-                      <Container fluid className="p-0 d-flex justify-content-center">
-                        <img className="img-fluid" src={img} alt="" />
-                      </Container>
-                    </SwiperSlide>
-                  )
-                })}
-              </Swiper>
-            ) : (
-              <Container fluid className="p-0 d-flex justify-content-center">
-                <img className="img-fluid" src={activeSlide} alt="" />
-              </Container>
-            )}
-          </ModalWindow>
+          <React.Component>
+            <ModalWindow closeHandler={() => closeHandler()}>
+              {modalSlider ? (
+                <Swiper
+                  loop={false}
+                  navigation={{
+                    nextEl: '#Block2__NextArrow',
+                    prevEl: '#Block2__PrewArrow',
+                  }}
+                  spaceBetween={10}
+                  slidesPerView={1}
+                  autoplay={{
+                    delay: 5000,
+                  }}
+                  // pagination={{
+                  //   clickable: true,
+                  //   bulletActiveClass: 'bulletActive',
+                  //   bulletClass: 'bullet',
+                  // }}
+                >
+                  {Config.letters.map((img, index) => {
+                    return (
+                      <SwiperSlide key={index}>
+                        <Container fluid className="p-0 d-flex justify-content-center">
+                          <img className="img-fluid" src={img} alt="" />
+                        </Container>
+                      </SwiperSlide>
+                    )
+                  })}
+                </Swiper>
+              ) : (
+                <Container fluid className="p-0 d-flex justify-content-center">
+                  <img className="img-fluid" src={activeSlide} alt="" />
+                </Container>
+              )}
+            </ModalWindow>
+
+            {/* <div className="Block6__navigationPagination">
+              <div className="Block6__navigation d-flex justify-content-center">
+                <div className="Block6__navigationArrows">
+                  <div id="Block2__PrewArrow">Prew</div>
+                  <div id="Block2__NextArrow">Next</div>
+                </div>
+              </div>
+              <div className="Block6__pagination">
+                <div className="swiper-pagination"></div>
+              </div>
+            </div> */}
+          </React.Component>
         )}
 
         <Row className="Block6__Row1 m-0">
