@@ -1,0 +1,16 @@
+.ScrollButton {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 300;
+
+  svg {
+    cursor: pointer;
+    fill: #6473fb;
+    opacity: .4;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}

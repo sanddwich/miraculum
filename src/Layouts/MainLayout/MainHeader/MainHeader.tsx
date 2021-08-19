@@ -8,6 +8,7 @@ import { setMobileMenu, setModalForm } from '../../../Redux/actions/modal'
 import MiraclumLogo from '../../../SharedComponents/MiraclumLogo/MiraclumLogo'
 import ScrollAnimation from 'react-animate-on-scroll'
 import './MainHeader.scss'
+import ScrollButton from '../../../SharedComponents/ScrollButton/ScrollButton'
 
 interface MainHeaderProps {
   setMobileMenu: (isActive: boolean) => void
@@ -27,6 +28,9 @@ const MainHeader = (props: MainHeaderProps) => {
   return (
     <Container fluid className="MainHeader">
       <Container className="MainHeader__Cont">
+
+        <ScrollButton />
+
         <Row className="MainHeader__Row1 m-0 d-flex justify-content-between">
           <NavLink to="/">
             <MiraclumLogo />
