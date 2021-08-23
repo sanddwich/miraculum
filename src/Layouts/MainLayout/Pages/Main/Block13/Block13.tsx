@@ -5,6 +5,7 @@ import ModalWindow from '../../../../../SharedComponents/ModalWindow/ModalWindow
 import './Block13.scss'
 import { Element } from 'react-scroll'
 import ScrollAnimation from 'react-animate-on-scroll'
+import { Config } from '../../../../../Config/Config'
 
 interface Block13Props {}
 
@@ -42,7 +43,7 @@ const Block13 = (props: Block13Props) => {
                   <h6>Местонахождение</h6>
                   <Row className="Block13__iconText m-0 align-items-top justify-content-start">
                     <Col xs={2} className="p-0">
-                      <ScrollAnimation animateOnce={true} offset={200} delay={1000} animateIn="animate__zoomIn">
+                      <ScrollAnimation animateOnce={true} offset={0} delay={400} animateIn="animate__zoomIn">
                         <img src="/icons/yellowMapPick.svg" alt="" />
                       </ScrollAnimation>
                     </Col>
@@ -53,12 +54,22 @@ const Block13 = (props: Block13Props) => {
                   <h6>Контактный телефон</h6>
                   <Row className="Block13__iconText m-0 align-items-top justify-content-start">
                     <Col xs={2} className="p-0">
-                      <ScrollAnimation animateOnce={true} offset={200} delay={1000} animateIn="animate__zoomIn">
+                      <ScrollAnimation animateOnce={true} offset={0} delay={700} animateIn="animate__zoomIn">
                         <img src="/icons/yellowPhone.svg" alt="" />
                       </ScrollAnimation>
                     </Col>
                     <Col xs={10} className="p-0 Block13__iconTextTitle">
                       <a href="tel:88512690339">8 (8512) 69-03-39</a>
+                    </Col>
+                  </Row>
+                  <Row className="Block13__iconText m-0 align-items-top justify-content-start">
+                    <Col xs={2} className="p-0">
+                      <ScrollAnimation animateOnce={true} offset={0} delay={1000} animateIn="animate__zoomIn">
+                        <img src="/icons/ycall.svg" alt="" />
+                      </ScrollAnimation>
+                    </Col>
+                    <Col xs={10} className="p-0 Block13__iconTextTitle" style={{fontSize: 24, fontWeight: 600}}>
+                      {Config.mailSettings.recipientMail}
                     </Col>
                   </Row>
                 </Container>

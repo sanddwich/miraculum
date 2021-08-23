@@ -18,7 +18,7 @@
 
   .ModalWindow__container {
     @media screen and(max-width:576px) {
-      top: 5%;  
+      top: 5%;
       bottom: 5%;
     }
   }
@@ -86,10 +86,15 @@
   .Block13__mapBG {
     cursor: pointer;
     .Block13__mapBlur {
-      height: 395px;
+      height: 477px;
       background-size: cover;
       background-position: center;
       filter: blur(3px);
+
+      @media screen and(max-width: 768px) {
+        margin-top: 50px !important;
+        height: 395px;
+      }
     }
 
     &:hover {
@@ -107,8 +112,12 @@
     img {
       position: absolute;
       z-index: 10;
-      margin-top: -220px;
+      margin-top: -270px;
       display: none;
+
+      @media screen and(max-width: 768px) {
+        margin-top: -220px;
+      }
     }
   }
 }

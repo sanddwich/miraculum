@@ -24,7 +24,7 @@ export default function MethodCard(props: MethodCardProps) {
         )}
         <Row className="MethodCard__Row1 m-0 d-flex justify-content-between align-items-center">
           <div className="MethodCard__title">{props.title}</div>
-          <div className="MethodCard__icon" onClick={() => setBounceMessage(true)}>
+          <div className="MethodCard__icon" onMouseEnter={() => setBounceMessage(true)} onMouseLeave={() => setBounceMessage(false)}>
             ?
           </div>
         </Row>
