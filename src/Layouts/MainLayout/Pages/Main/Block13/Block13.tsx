@@ -58,10 +58,11 @@ const Block13 = (props: Block13Props) => {
                         <img src="/icons/yellowPhone.svg" alt="" />
                       </ScrollAnimation>
                     </Col>
-                    <Col xs={10} className="p-0 Block13__iconTextTitle">
+                    <Col xs={10} className="p-0 Block13__iconTextTitle" style={{fontSize: 24, fontWeight: 600}}>
                       <a href="tel:88512690339">8 (8512) 69-03-39</a>
                     </Col>
                   </Row>
+                  <h6>Почта</h6>
                   <Row className="Block13__iconText m-0 align-items-top justify-content-start">
                     <Col xs={2} className="p-0">
                       <ScrollAnimation animateOnce={true} offset={0} delay={1000} animateIn="animate__zoomIn">
