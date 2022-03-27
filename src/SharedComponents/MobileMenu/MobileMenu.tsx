@@ -6,7 +6,7 @@ import { setMobileMenu, setModalForm } from '../../Redux/actions/modal'
 import './MobileMenu.scss'
 import { connect } from 'react-redux'
 import { scroller } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import IconButton from '../IconButton/IconButton'
 
 interface MobileMenuProps {
@@ -64,14 +64,14 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
       <Container fluid className="MobileMenu p-0 animated animate__fadeInDownBig">
         <Row className="MobileMenu__oneRow m-0 d-flex justify-content-between align-items-center">
           <div className="MobileMenu__logo p-2">
-            <ScrollAnimation animateOnce={true} delay={500} offset={0} animateIn="animate__fadeIn">
+            <AnimationOnScroll animateOnce={true} delay={500} offset={0} animateIn="animate__fadeIn">
               <img className="img-fluid" src="/images/logo.png" alt="" />
-            </ScrollAnimation>
+            </AnimationOnScroll>
           </div>
           <div className="MobileMenu__closeButton">
-            <ScrollAnimation animateOnce={true} delay={500} offset={0} animateIn="animate__fadeIn">
+            <AnimationOnScroll animateOnce={true} delay={500} offset={0} animateIn="animate__fadeIn">
               <img src="/icons/close__white.svg" alt="" onClick={() => this.closeButton()} />
-            </ScrollAnimation>
+            </AnimationOnScroll>
           </div>
         </Row>
         <Row className="MobileMenu__twoRow m-0">
@@ -87,17 +87,17 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
           </Col>
         </Row>
         <Row className="MobileMenu__phone m-0 d-flex justify-content-start align-items-center">
-          <ScrollAnimation animateOnce={true} delay={500} offset={0} animateIn="animate__fadeIn">
+          <AnimationOnScroll animateOnce={true} delay={500} offset={0} animateIn="animate__fadeIn">
             <div className="MobileMenu__phone d-block">
               <div className="MobileMenu__phoneNumber">
                 <a href="tel:88512690339">8 (8512) 69-03-39</a>
               </div>
               <div className="MainHeader__phoneTitle" onClick={() => this.props.setModalForm(true)}>Обратный звонок</div>
             </div>
-          </ScrollAnimation>
+          </AnimationOnScroll>
         </Row>
         <Row className="MobileMenu__socialLinks m-0">
-          <ScrollAnimation animateOnce={true} delay={700} offset={0} animateIn="animate__fadeIn">
+          <AnimationOnScroll animateOnce={true} delay={700} offset={0} animateIn="animate__fadeIn">
             <IconButton
               bgColor="#6473FB"
               borderRadius="3px"
@@ -108,7 +108,7 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
               width={300}
               onClickHandler={() => this.props.setModalForm(true)}
             />
-          </ScrollAnimation>
+          </AnimationOnScroll>
         </Row>
       </Container>
     )

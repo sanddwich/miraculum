@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import './MiraclumLogo.scss'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 interface MiraclumLogoProps {}
 
@@ -10,15 +10,15 @@ export default function MiraclumLogo(props: MiraclumLogoProps) {
     <Container fluid className="MiraclumLogo p-0">
       <div className="MainHeader__logoCont d-flex justify-content-start">
         <div className="MainHeader__logo">
-          <ScrollAnimation animateOnce={false} offset={0} delay={300} duration={1.5} animateIn="animate__flipInY">
+          <AnimationOnScroll animateOnce={false} offset={0} delay={300} duration={1.5} animateIn="animate__flipInY">
             <img src="/img/logo.png" alt="" />
-          </ScrollAnimation>
+          </AnimationOnScroll>
         </div>
         <div className="MainHeader__logoText d-block">
-          <ScrollAnimation animateOnce={false} offset={0} duration={1.5} animateIn="animate__fadeIn">
+          <AnimationOnScroll animateOnce={false} offset={0} duration={1.5} animateIn="animate__fadeIn">
             <div className="MainHeader__logoTitle">MIRACULUM</div>
             <div className="MainHeader__logoDescr">research group </div>
-          </ScrollAnimation>
+          </AnimationOnScroll>
         </div>
       </div>
     </Container>

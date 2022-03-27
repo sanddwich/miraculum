@@ -11,7 +11,7 @@ import { ModalState } from '../../../../../Redux/interfaces/interfaces'
 import ReactInputMask from 'react-input-mask'
 import LoaderHorizontal from '../../../../../SharedComponents/LoaderHorizontal/LoaderHorizontal'
 import { Element } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 interface Block12Props {
   modal: ModalState
@@ -77,15 +77,15 @@ const Block12 = (props: Block12Props) => {
 
   return (
     <Element name="Block12">
-      <ScrollAnimation animateOnce={true} offset={200} animateIn="animate__fadeInUp">
+      <AnimationOnScroll animateOnce={true} offset={200} animateIn="animate__fadeInUp">
         <Container fluid className="Block12">
           <Container className="Block12__Cont p-0">
             <h1>Нужно провести исследование?</h1>
             <h4>Оставьте свои контактные данные и мы перезвоним вам самостоятельно</h4>
 
-            <Row className="Block12__formFields m-0 justify-content-start align-items-top">
+            <div className="Block12__formFields m-0 d-flex flex-wrap justify-content-start align-items-top">
               <div className="Block12__formFieldCont d-block">
-                <ScrollAnimation animateOnce={true} offset={0} delay={1000} animateIn="animate__fadeIn">
+                <AnimationOnScroll animateOnce={true} offset={0} delay={1000} animateIn="animate__fadeIn">
                   <input
                     className="Block12__input"
                     type="text"
@@ -96,10 +96,10 @@ const Block12 = (props: Block12Props) => {
                   />
                   <div className="KisModalForm__imgCont"></div>
                   {nameError && <div className="Block12__inputError">Не корректное заполнение поля</div>}
-                </ScrollAnimation>
+                </AnimationOnScroll>
               </div>
               <div className="Block12__formFieldCont d-block">
-                <ScrollAnimation animateOnce={true} offset={0} delay={1200} animateIn="animate__fadeIn">
+                <AnimationOnScroll animateOnce={true} offset={0} delay={1200} animateIn="animate__fadeIn">
                   <ReactInputMask
                     mask="9 (999) 999-99-99"
                     className={`Block12__input phone `}
@@ -114,10 +114,10 @@ const Block12 = (props: Block12Props) => {
                   </div>
 
                   {phoneError && <div className="Block12__inputError">Не корректное заполнение поля</div>}
-                </ScrollAnimation>
+                </AnimationOnScroll>
               </div>
               <div className="Block12__formFieldCont">
-                <ScrollAnimation animateOnce={true} offset={0} delay={1400} animateIn="animate__fadeIn">
+                <AnimationOnScroll animateOnce={true} offset={0} delay={1400} animateIn="animate__fadeIn">
                   {loading ? (
                     <LoaderHorizontal />
                   ) : (
@@ -134,9 +134,9 @@ const Block12 = (props: Block12Props) => {
                       />
                     </div>
                   )}
-                </ScrollAnimation>
+                </AnimationOnScroll>
               </div>
-            </Row>
+            </div>
 
             <p>
               Нажимая на кнопку, вы соглашаетесь с{' '}
@@ -146,7 +146,7 @@ const Block12 = (props: Block12Props) => {
             </p>
           </Container>
         </Container>
-      </ScrollAnimation>
+      </AnimationOnScroll>
     </Element>
   )
 }

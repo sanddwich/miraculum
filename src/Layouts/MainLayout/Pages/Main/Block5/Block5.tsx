@@ -3,14 +3,14 @@ import { Col, Container, Row } from 'react-bootstrap'
 import SolutionCard from '../../../../../SharedComponents/SolutionCard/SolutionCard'
 import './Block5.scss'
 import { Element } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 interface Block5Props {}
 
 export default function Block5(props: Block5Props) {
   return (
     <Element name="Block5">
-      <ScrollAnimation animateOnce={true} offset={300} animateIn="animate__fadeInUp">
+      <AnimationOnScroll animateOnce={true} offset={300} animateIn="animate__fadeInUp">
         <Container className="Block5">
           <h1>Решения</h1>
           <Row className="Block5__Row1 m-0">
@@ -70,7 +70,7 @@ export default function Block5(props: Block5Props) {
             <div className="MobileHorLine"></div>
           </div>
         </Container>
-      </ScrollAnimation>
+      </AnimationOnScroll>
     </Element>
   )
 }

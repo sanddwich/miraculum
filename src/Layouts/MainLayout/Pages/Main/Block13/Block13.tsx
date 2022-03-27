@@ -4,7 +4,7 @@ import { YMaps, Map, Placemark } from 'react-yandex-maps'
 import ModalWindow from '../../../../../SharedComponents/ModalWindow/ModalWindow'
 import './Block13.scss'
 import { Element } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { Config } from '../../../../../Config/Config'
 
 interface Block13Props {}
@@ -18,7 +18,7 @@ const Block13 = (props: Block13Props) => {
 
   return (
     <Element name="Block13">
-      <ScrollAnimation animateOnce={true} offset={200} animateIn="animate__fadeInUp">
+      <AnimationOnScroll animateOnce={true} offset={200} animateIn="animate__fadeInUp">
         <Container fluid className="Block13">
           {showMap && (
             <ModalWindow closeHandler={() => setShowMap(false)}>
@@ -43,9 +43,9 @@ const Block13 = (props: Block13Props) => {
                   <h6>Местонахождение</h6>
                   <Row className="Block13__iconText m-0 align-items-top justify-content-start">
                     <Col xs={2} className="p-0">
-                      <ScrollAnimation animateOnce={true} offset={0} delay={400} animateIn="animate__zoomIn">
+                      <AnimationOnScroll animateOnce={true} offset={0} delay={400} animateIn="animate__zoomIn">
                         <img src="/icons/yellowMapPick.svg" alt="" />
-                      </ScrollAnimation>
+                      </AnimationOnScroll>
                     </Col>
                     <Col xs={10} className="p-0 Block13__iconTextTitle">
                       г. Астрахань, ул. Минусинская, 8, литер Д, офис 333
@@ -54,9 +54,9 @@ const Block13 = (props: Block13Props) => {
                   <h6>Контактный телефон</h6>
                   <Row className="Block13__iconText m-0 align-items-top justify-content-start">
                     <Col xs={2} className="p-0">
-                      <ScrollAnimation animateOnce={true} offset={0} delay={700} animateIn="animate__zoomIn">
+                      <AnimationOnScroll animateOnce={true} offset={0} delay={700} animateIn="animate__zoomIn">
                         <img src="/icons/yellowPhone.svg" alt="" />
-                      </ScrollAnimation>
+                      </AnimationOnScroll>
                     </Col>
                     <Col xs={10} className="p-0 Block13__iconTextTitle" style={{fontSize: 24, fontWeight: 600}}>
                       <a href="tel:88512690339">8 (8512) 69-03-39</a>
@@ -65,9 +65,9 @@ const Block13 = (props: Block13Props) => {
                   <h6>Почта</h6>
                   <Row className="Block13__iconText m-0 align-items-top justify-content-start">
                     <Col xs={2} className="p-0">
-                      <ScrollAnimation animateOnce={true} offset={0} delay={1000} animateIn="animate__zoomIn">
+                      <AnimationOnScroll animateOnce={true} offset={0} delay={1000} animateIn="animate__zoomIn">
                         <img src="/icons/ycall.svg" alt="" />
-                      </ScrollAnimation>
+                      </AnimationOnScroll>
                     </Col>
                     <Col xs={10} className="p-0 Block13__iconTextTitle" style={{fontSize: 24, fontWeight: 600}}>
                       {Config.mailSettings.recipientMail}
@@ -90,7 +90,7 @@ const Block13 = (props: Block13Props) => {
             </Row>
           </Container>
         </Container>
-      </ScrollAnimation>
+      </AnimationOnScroll>
     </Element>
   )
 }

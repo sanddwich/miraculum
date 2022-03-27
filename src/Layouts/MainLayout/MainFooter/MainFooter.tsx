@@ -27,7 +27,7 @@ const MainFooter = (props: MainFooterProps) => {
   return (
     <Container fluid className="MainFooter">
       <Container className="MainFooter__Cont p-0">
-        <Row className="MainFooter__Row m-0 justify-content-between align-items-start">
+        <div className="MainFooter__Row m-0 d-flex flex-wrap justify-content-between align-items-start">
           <div className="MainFooter__container d-block" style={{paddingRight: 100}}>
             <MiraclumLogo />
             <div className="MainFooter__text pt-5 d-none d-md-block">Политика конфиденциальности</div>
@@ -44,7 +44,7 @@ const MainFooter = (props: MainFooterProps) => {
             <div className="MainFooter__textHeader">Напишите нам </div>
             <div className="MainFooter__img pt-5 d-flex">
               <img className="hvr-grow" src="/icons/footer1.svg" alt="" onClick={() => externalLink('VK')} />
-              <img className="hvr-grow" src="/icons/footer2.svg" alt="" onClick={() => externalLink('INSTA')} />
+              {/* <img className="hvr-grow" src="/icons/footer2.svg" alt="" onClick={() => externalLink('INSTA')} /> */}
               <a href={`mailto:${Config.mailSettings.recipientMail}`}><img className="hvr-grow" src="/icons/footer3.svg" alt="" /></a>
             </div>
           </div>
@@ -55,7 +55,7 @@ const MainFooter = (props: MainFooterProps) => {
               <a href={Config.deeSite}>Сайт разработан – deedesign</a>
             </div>
           </div>
-        </Row>
+        </div>
       </Container>
     </Container>
   )

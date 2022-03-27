@@ -15,12 +15,12 @@ export default function SolutionCard(props: SolutionCardProps) {
   return (
     <OutsideClickHandler onOutsideClick={() => setBounceMessage(false)}>
       <Container fluid className="SolutionCard" onClick={() => setBounceMessage(!bounceMessage)}>
-        <Row className="SolutionCard__Row1 m-0 d-flex justify-content-between align-items-center">
+        <div className="SolutionCard__Row1 m-0 d-flex justify-content-between align-items-center">
           <div className="SolutionCard__title">{props.title}</div>
           <div className="SolutionCard__icon">
             <img className="img-fluid" src={props.icon} alt={props.icon} />
           </div>
-        </Row>
+        </div>
       </Container>
 
       {props.children && bounceMessage && (

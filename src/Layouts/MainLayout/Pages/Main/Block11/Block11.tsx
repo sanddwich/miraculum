@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import IconButton from '../../../../../SharedComponents/IconButton/IconButton'
 import './Block11.scss'
 import { Element } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { Config } from '../../../../../Config/Config'
 
 interface Block11Props {}
@@ -15,7 +15,7 @@ export default function Block11(props: Block11Props) {
 
   return (
     <Element name="Block11">
-      <ScrollAnimation animateOnce={true} offset={200} animateIn="animate__fadeInUp">
+      <AnimationOnScroll animateOnce={true} offset={200} animateIn="animate__fadeInUp">
         <Container className="Block11">
           <Row className="Block11_Cont m-0">
             <Col lg={6} className="Block11__content">
@@ -44,7 +44,7 @@ export default function Block11(props: Block11Props) {
             </Col>
           </Row>
         </Container>
-      </ScrollAnimation>
+      </AnimationOnScroll>
     </Element>
   )
 }

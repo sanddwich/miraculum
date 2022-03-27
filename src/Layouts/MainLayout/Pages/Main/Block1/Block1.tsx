@@ -8,7 +8,7 @@ import './Block1.scss'
 import { setModalForm } from '../../../../../Redux/actions/modal'
 import { ModalState } from '../../../../../Redux/interfaces/interfaces'
 import { Element } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 interface Block1 {
   modal: ModalState
@@ -28,7 +28,7 @@ const Block1 = (props: Block1) => {
         <Container className="Block1__Content">
           <Row className="Block1__Row1 m-0">
             <Col md={6} xs={12} className="Block1__Left">
-              <ScrollAnimation animateOnce={true} offset={0} animateIn="animate__fadeInLeft">
+              <AnimationOnScroll animateOnce={true} offset={0} animateIn="animate__fadeInLeft">
                 <div className="Block1__blurCard d-flex align-items-center">
                   <div>
                     <h1>Маркетинговые исcледования</h1>
@@ -45,31 +45,31 @@ const Block1 = (props: Block1) => {
                     />
                   </div>
                 </div>
-              </ScrollAnimation>
+              </AnimationOnScroll>
             </Col>
             <Col md={6} className="Block1__circleDots">
               <div className="Block1__circleDot1">
-                <ScrollAnimation animateOnce={true} offset={0} delay={1000} animateIn="animate__fadeIn">
+                <AnimationOnScroll animateOnce={true} offset={0} delay={1000} animateIn="animate__fadeIn">
                   <CircleDot bgCircles="#ffffff" bgCirclesHover="#6473FB" diam={50}>
                     <div id="Miraclum__dotMessage">
                       <div className="Miraclum__dotMessageTitle">12+ лет</div>
                       <div className="Miraclum__dotMessageContent">в исследованиях</div>
                     </div>
                   </CircleDot>
-                </ScrollAnimation>
+                </AnimationOnScroll>
               </div>
               <div className="Block1__circleDot2">
-                <ScrollAnimation animateOnce={true} offset={0} delay={1400} animateIn="animate__fadeIn">
+                <AnimationOnScroll animateOnce={true} offset={0} delay={1400} animateIn="animate__fadeIn">
                   <CircleDot bgCircles="#ffffff" bgCirclesHover="#6473FB" diam={50}>
                     <div id="Miraclum__dotMessage">
                       <div className="Miraclum__dotMessageTitle">30 операторов</div>
                       <div className="Miraclum__dotMessageContent">в собственном CALL-центре</div>
                     </div>
                   </CircleDot>
-                </ScrollAnimation>
+                </AnimationOnScroll>
               </div>
               <div className="Block1__circleDot3">
-                <ScrollAnimation animateOnce={true} offset={0} delay={1200} animateIn="animate__fadeIn">
+                <AnimationOnScroll animateOnce={true} offset={0} delay={1200} animateIn="animate__fadeIn">
                   <CircleDot bgCircles="#ffffff" bgCirclesHover="#6473FB" diam={50}>
                     <div id="Miraclum__dotMessage">
                       <div className="Miraclum__dotMessageTitle">75+ регионов России</div>
@@ -78,7 +78,7 @@ const Block1 = (props: Block1) => {
                       </div>
                     </div>
                   </CircleDot>
-                </ScrollAnimation>
+                </AnimationOnScroll>
               </div>
             </Col>
           </Row>

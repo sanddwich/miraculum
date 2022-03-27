@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap'
 import AreaCard from '../../../../../SharedComponents/AreaCard/AreaCard'
 import './Block9.scss'
 import { Element } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 interface Block9Props {}
 
@@ -95,7 +95,7 @@ export default function Block9(props: Block9Props) {
 
   return (
     <Element name="Block9">
-      <ScrollAnimation animateOnce={true} offset={200} animateIn="animate__fadeInUp">
+      <AnimationOnScroll animateOnce={true} offset={200} animateIn="animate__fadeInUp">
         <Container fluid className="Block9 p-0 d-none d-lg-block">
           <Container className="Block9__Cont">
             <Row className="Block9__Row1 m-0">
@@ -134,7 +134,7 @@ export default function Block9(props: Block9Props) {
             </Row>
           </Container>
         </Container>
-      </ScrollAnimation>
+      </AnimationOnScroll>
     </Element>
   )
 }

@@ -15,9 +15,9 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
-import 'swiper/swiper.scss'
-import 'swiper/components/navigation/navigation.scss'
-import 'swiper/components/pagination/pagination.scss'
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination, Autoplay])
@@ -75,9 +75,6 @@ const Block6 = (props: Block6Props) => {
                 }}
                 spaceBetween={10}
                 slidesPerView={1}
-                autoplay={{
-                  delay: 5000,
-                }}
                 pagination={{
                   clickable: true,
                   el: '.swiper-pagination',

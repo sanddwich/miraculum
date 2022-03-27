@@ -3,7 +3,7 @@ import { Container, Row } from 'react-bootstrap'
 import { Config } from '../../../../../Config/Config'
 import './Block7.scss'
 import { Element } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 interface Block7Props {}
 
@@ -13,17 +13,17 @@ export default function Block7(props: Block7Props) {
       <Container fluid className="Block7">
         <Container className="Block7__Cont p-0">
           <h1>Наши клиенты</h1>
-          <Row className="Block7__Row1 m-0 justify-content-center justify-content-md-between align-items-center">
+          <div className="Block7__Row1 m-0 d-flex flex-wrap justify-content-center align-items-center">
             {Config.partners.map((partner, index) => {
               return (
                 <div key={index} className="Block7__partner">
-                  <ScrollAnimation animateOnce={true} offset={200} delay={index * 150} animateIn="animate__fadeIn">
+                  <AnimationOnScroll animateOnce={true} offset={200} delay={index * 150} animateIn="animate__fadeIn">
                     <img className="img-fluid" src={partner.img} alt={partner.name} />
-                  </ScrollAnimation>
+                  </AnimationOnScroll>
                 </div>
               )
             })}
-          </Row>
+          </div>
         </Container>
       </Container>
     </Element>

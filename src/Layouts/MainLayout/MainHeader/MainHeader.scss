@@ -4,11 +4,16 @@
   position: relative;
   z-index: 10;
 
+  .Sanddwich {
+    display: flex;
+  }
+
   .MainHeader__Cont {
     padding: 0;
     padding-top: 50px;
 
     .MainHeader__Row1 {
+      // width: 100%;
       padding-bottom: 50px;
     }
 

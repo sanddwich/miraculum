@@ -3,14 +3,14 @@ import { Col, Container, Row } from 'react-bootstrap'
 import MethodCard from '../../../../../SharedComponents/MethodCard/MethodCard'
 import './Block4.scss'
 import { Element } from 'react-scroll'
-import ScrollAnimation from 'react-animate-on-scroll'
+import { AnimationOnScroll } from 'react-animation-on-scroll'
 
 interface Block4Props {}
 
 export default function Block4(props: Block4Props) {
   return (
     <Element name="Block4">
-      <ScrollAnimation animateOnce={true} offset={300} animateIn="animate__fadeInUp">
+      <AnimationOnScroll animateOnce={true} offset={300} animateIn="animate__fadeInUp">
         <Container className="Block4">
           <h1>Методы</h1>
           <Row className="Block4__Row1 m-0">
@@ -69,7 +69,7 @@ export default function Block4(props: Block4Props) {
             <div className="MobileHorLine"></div>
           </div>
         </Container>
-      </ScrollAnimation>
+      </AnimationOnScroll>
     </Element>
   )
 }

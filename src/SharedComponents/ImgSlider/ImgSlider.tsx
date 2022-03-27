@@ -11,7 +11,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
 import 'swiper/swiper.scss'
-import ScrollAnimation from 'react-animate-on-scroll'
 
 // install Swiper modules
 SwiperCore.use([Navigation, Pagination])

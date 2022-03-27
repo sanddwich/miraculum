@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { Redirect, Route, Switch } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import { RootState } from '../../Redux'
 import MainBody from './MainBody/MainBody'
 import MainFooter from './MainFooter/MainFooter'
@@ -177,12 +177,12 @@ const MainLayout = (props: MainLayoutProps) => {
 
       <MainHeader />
       <MainBody>
-        <Switch>
-          <Route path="/" exact component={Main} />
-          <Route path="/second" exact component={Second} />
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/second" element={<Second />} />
 
-          <Redirect to="/" />
-        </Switch>
+          <Route path="*" element={<Main />} />
+        </Routes>
       </MainBody>
 
       <MainFooter />
