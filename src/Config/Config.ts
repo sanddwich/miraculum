@@ -18,6 +18,7 @@ export const Config: ConfigInterface = {
   },
   socialLinks: [
     { url: 'https://vk.com/miraculum_research_group', socialLinkType: 'VK' },
+    { url: 'https://t.me/o_kormushin', socialLinkType: 'TELEGRAM' },
     { url: 'https://www.instagram.com/miraculum.rg/', socialLinkType: 'INSTA' },
   ],
   letters: [

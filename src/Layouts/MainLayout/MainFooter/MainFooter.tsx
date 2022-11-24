@@ -44,6 +44,7 @@ const MainFooter = (props: MainFooterProps) => {
             <div className="MainFooter__textHeader">Напишите нам </div>
             <div className="MainFooter__img pt-5 d-flex">
               <img className="hvr-grow" src="/icons/footer1.svg" alt="" onClick={() => externalLink('VK')} />
+              <img className="hvr-grow" src="/icons/telega.svg" alt="" onClick={() => externalLink('TELEGRAM')} />
               {/* <img className="hvr-grow" src="/icons/footer2.svg" alt="" onClick={() => externalLink('INSTA')} /> */}
               <a href={`mailto:${Config.mailSettings.recipientMail}`}><img className="hvr-grow" src="/icons/footer3.svg" alt="" /></a>
             </div>

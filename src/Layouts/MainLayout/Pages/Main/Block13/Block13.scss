@@ -61,7 +61,7 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 20px !important;
     line-height: 145%;
     font-feature-settings: 'pnum' on, 'lnum' on;
 
@@ -76,11 +76,16 @@
         color: #6975df;
       }
     }
+
   }
 
   .Block13__content {
     padding: 0;
     padding-right: 50px;
+
+    @media screen and(max-width: 576px) {
+      padding-right: 0px;
+    }
   }
 
   .Block13__mapBG {

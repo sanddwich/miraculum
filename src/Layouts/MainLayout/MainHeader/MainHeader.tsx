@@ -44,7 +44,7 @@ const MainHeader = (props: MainHeaderProps) => {
           </div>
           <div className="MainHeader__phoneCont d-none d-sm-block">
             <div className="MainHeader__phone">
-              <a href="tel:88512690339">8 (8512) 69-03-39</a>
+              <a href="tel:89170865242">8 (917) 086-52-42</a>
             </div>
             <div className="MainHeader__phoneTitle" onClick={() => props.setModalForm(true)}>
               Обратный звонок
