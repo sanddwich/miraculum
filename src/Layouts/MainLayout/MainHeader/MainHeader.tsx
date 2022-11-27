@@ -54,7 +54,7 @@ const MainHeader = (props: MainHeaderProps) => {
 
         <div className="MainHeader__phoneNumber m-0 d-sm-none">
           <div className="MainHeader__phone">
-            <a href="tel:88512690339" style={{color: '#FFD467'}}>8 (8512) 69-03-39</a>
+            <a href="tel:89170865242" style={{color: '#FFD467'}}>8 (917) 086-52-42</a>
           </div>
         </div>
 

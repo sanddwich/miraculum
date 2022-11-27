@@ -90,7 +90,7 @@ class MobileMenu extends React.Component<MobileMenuProps, MobileMenuState> {
           <AnimationOnScroll animateOnce={true} delay={500} offset={0} animateIn="animate__fadeIn">
             <div className="MobileMenu__phone d-block">
               <div className="MobileMenu__phoneNumber">
-                <a href="tel:88512690339">8 (8512) 69-03-39</a>
+                <a href="tel:89170865242">8 (917) 086-52-42</a>
               </div>
               <div className="MainHeader__phoneTitle" onClick={() => this.props.setModalForm(true)}>Обратный звонок</div>
             </div>
