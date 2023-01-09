@@ -74,7 +74,7 @@ const Block13 = (props: Block13Props) => {
                       </AnimationOnScroll>
                     </Col>
                     <Col xs={10} className="p-0 Block13__iconTextTitle" style={{ fontSize: 24, fontWeight: 600 }}>
-                      {Config.mailSettings.recipientMail}
+                      <a href={`mailto:${Config.mailSettings.recipientMail}`}>{Config.mailSettings.recipientMail}</a>
                     </Col>
                   </Row>
                 </Container>
