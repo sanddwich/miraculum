@@ -14,7 +14,8 @@ export const Config: ConfigInterface = {
     userName: '',
     userPhone: '',
     // recipientMail: 'bck-dkiselev@yandex.ru',
-    recipientMail: 'info@miraculum-rg.ru',
+    // recipientMail: 'info@miraculum-rg.ru',
+    recipientMail: 'miraculum.rg@mail.ru',
   },
   socialLinks: [
     { url: 'https://vk.com/miraculum_research_group', socialLinkType: 'VK' },
