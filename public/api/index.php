@@ -10,7 +10,8 @@ $body = json_decode(file_get_contents("php://input"));
 
 $userPhone = $body->userPhone;
 $userName = $body->userName;
-$senderMail = $body->senderMail;
+// $senderMail = $body->senderMail;
+$senderMail = 'miraculum@ak30.ru';
 // $senderMailPass = $body->senderMailPass;
 $senderMailPass = 'Dfghjkiuy789'; //Не очень хорошая идея передавать пароль в объекте :-)
 $senderMailServer = $body->senderMailServer;

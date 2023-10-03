@@ -8,7 +8,7 @@ export const Config: ConfigInterface = {
   phoneMinLength: 11,
   mailSettings: {
     apiPath: '/api/index.php',
-    senderMail: 'miraculum@deestore.ru',
+    senderMail: 'miraculum@ak30.ru',
     senderMailInfo: 'Miraculum Info',
     senderMailServer: 'ssl://mail.hostland.ru',
     userName: '',
